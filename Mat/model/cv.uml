@@ -2,9 +2,7 @@
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="MRncdw6D.AACAUih" name="cv" URI="">
   <eAnnotations xmi:id="_oNJXwG2xEeqnxKQ0JDuZZw" source="http://sse.tu-ilmenau.de/codegen">
     <details xmi:id="_qGBk8G2xEeqnxKQ0JDuZZw" key="doNotGenerate" value="true"/>
-  </eAnnotations>
-  <eAnnotations xmi:id="_oWYisISvEeqUKZtj18WXJA" source="include">
-    <details xmi:id="_o8IUEISvEeqUKZtj18WXJA" key="path" value="opencv2/opencv.hpp"/>
+    <details xmi:id="_WJU2EIjFEeqq9OVwrY9agA" key="includePath" value="opencv2/opencv.hpp"/>
   </eAnnotations>
   <packageImport xmi:id="_rgWIkLArEeert7O7oCVCsA">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>

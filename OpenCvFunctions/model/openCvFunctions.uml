@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HhFBwE4UEeiTBv0OlW4vQw" name="openCvFunctions">
-  <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="OpenCvFunctions">
+  <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="OpenCvFunctions" classifierBehavior="_vgNugJEYEeqvZ7mBc2P9AQ">
     <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_YyT5AE4UEeiTBv0OlW4vQw" name="fbNull">
       <language>CPP</language>
       <body>;</body>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_S5MioE6cEeqyNvPDU5XeYA" name="fbAddBorder" specification="_Ide5sFC1Eeq1EqXxxN7UeQ">
       <ownedParameter xmi:id="_yBR78FDAEeq9rLGcLmUOPg" name="inputImage">
-        <type xmi:type="uml:Class" href="../../UMatData/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_BbExkJEZEeqvZ7mBc2P9AQ" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
       <language>CPP</language>
       <language>INCLUDE</language>
@@ -17,29 +20,27 @@
       <language>LIBRARY2</language>
       <body>using namespace cv;
 
-std::cout&lt;&lt;&quot;Bild bearbeiten...&quot; &lt;&lt; std::endl;
+std::cout&lt;&lt;&quot;Add border&quot; &lt;&lt; std::endl;
 
-std::shared_ptr&lt;cv::Mat>  dst = std::make_shared&lt;cv::Mat>();
 int top, bottom, left, right;
 int borderType = BORDER_CONSTANT;
-const char* window_name = &quot;copyMakeBorder Demo&quot;;
 RNG rng(12345);
 
-  if( inputImage->empty() )
-    {
-      printf(&quot; No data entered, please enter the path to an image file \n&quot;);
-    }
+if( inputImage->empty() )
+{
+  printf(&quot; No data entered, please enter the path to an image file \n&quot;);
+}
 
-  namedWindow( window_name, WINDOW_AUTOSIZE );
-  top = (int) (0.05*(inputImage->rows)); bottom = (int) (0.05*(inputImage->rows));
-  left = (int) (0.05*(inputImage->cols)); right = (int) (0.05*(inputImage->cols));
-  *dst = *inputImage;
-  imshow( window_name, *dst );
-  Scalar value( rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255) );
-  copyMakeBorder( *inputImage, *dst, top, bottom, left, right, borderType, value );
-  imshow( window_name, *dst );
+top = (int) (0.05*(inputImage->rows));
+bottom = (int) (0.05*(inputImage->rows));
+left = (int) (0.05*(inputImage->cols));
+right = (int) (0.05*(inputImage->cols));
 
-imwrite( &quot;lena1.png&quot;, * dst);</body>
+Scalar value( rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255) );
+
+outputImage = inputImage;
+
+copyMakeBorder( *inputImage, *outputImage, top, bottom, left, right, borderType, value );</body>
       <body>#include &lt;iostream>
 #include &quot;opencv2/opencv.hpp&quot;</body>
       <body>libopencv_core
@@ -49,8 +50,7 @@ libopencv_imgcodecs</body>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_EBJJ4FC4Eeq1EqXxxN7UeQ" name="fbLoadImage" specification="_Bx5gkFC3Eeq1EqXxxN7UeQ">
       <ownedParameter xmi:id="_puGsMFC9EeqcOK2DUAL-Pw" name="outputImage" direction="return">
-        <type xmi:type="uml:Class" href="../../UMatData/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_CeutMFC-EeqcOK2DUAL-Pw"/>
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
       <language>CPP</language>
       <language>INCLUDE</language>
@@ -70,8 +70,9 @@ if(matPointer->empty() )
 {
       printf(&quot;No data entered, please enter the path to an image file \n&quot;);
 }
-
+std::cout&lt;&lt;&quot;Bild laden mitte ...&quot; &lt;&lt; std::endl;
 outputImage = matPointer;
+std::cout&lt;&lt;&quot;Bild laden ende ...&quot; &lt;&lt; std::endl;
 //end</body>
       <body>#include &lt;iostream>
 #include &quot;opencv2/opencv.hpp&quot;</body>
@@ -80,15 +81,190 @@ libopencv_imgproc
 libopencv_highgui
 libopencv_imgcodecs</body>
     </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_vgNugJEYEeqvZ7mBc2P9AQ" name="fbSaveImage" specification="_aj080I02Eeq0h-SaVz8HEQ">
+      <ownedParameter xmi:id="_8JPrkJEYEeqvZ7mBc2P9AQ" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <body>using namespace cv;
+
+std::cout&lt;&lt;&quot;Save image&quot; &lt;&lt; std::endl;
+
+if( inputImage->empty() )
+{
+	std::cout&lt;&lt;&quot;No data entered, please enter the path to an image file. Std&quot; &lt;&lt; std::endl;
+      printf(&quot; No data entered, please enter the path to an image file \n&quot;);
+}
+
+imwrite( &quot;lena1.png&quot;, *inputImage);</body>
+      <body>#include &lt;iostream>
+#include &quot;opencv2/opencv.hpp&quot;</body>
+      <body>libopencv_core
+libopencv_imgproc
+libopencv_highgui
+libopencv_imgcodecs</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_1evW4JEiEeqn6NSw2h6Cow" name="fbShowImage" specification="_9nlGQJEiEeqn6NSw2h6Cow">
+      <ownedParameter xmi:id="_52faQJEiEeqn6NSw2h6Cow" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <body>using namespace cv;
+
+std::cout&lt;&lt;&quot;Show image&quot; &lt;&lt; std::endl;
+
+if( inputImage->empty() )
+{
+      printf(&quot; No data entered, please enter the path to an image file \n&quot;);
+}
+
+const char* window_name = &quot;OpenCV MDE4CPP - Show Image&quot;;
+namedWindow( window_name, WINDOW_AUTOSIZE );
+
+imshow( window_name, *inputImage);
+waitKey(0); </body>
+      <body>#include &lt;iostream>
+#include &quot;opencv2/opencv.hpp&quot;</body>
+      <body>libopencv_core
+libopencv_imgproc
+libopencv_highgui
+libopencv_imgcodecs</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_XJgXoJE_EeqXzolMok_G0Q" name="fbGaussianBlur" specification="_lgz0YJE_EeqXzolMok_G0Q">
+      <ownedParameter xmi:id="_c6mMgJE_EeqXzolMok_G0Q" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_d4szgJE_EeqXzolMok_G0Q" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <body>using namespace cv;
+
+std::cout&lt;&lt;&quot;Gaussian blur&quot; &lt;&lt; std::endl;
+
+Size ksize = Size(31,31);
+double sigmaX = 0;
+double sigmaY = 0;
+int borderType = BORDER_CONSTANT;
+
+if( inputImage->empty() )
+{
+  printf(&quot; No data entered, please enter the path to an image file \n&quot;);
+}
+
+outputImage = inputImage;
+
+GaussianBlur(
+		*inputImage,
+		*outputImage,
+		ksize,
+		sigmaX,
+		sigmaY,
+		borderType
+	);
+
+</body>
+      <body>#include &lt;iostream>
+#include &quot;opencv2/opencv.hpp&quot;</body>
+      <body>libopencv_core
+libopencv_imgproc
+libopencv_highgui
+libopencv_imgcodecs</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_3LyBUJE_EeqXzolMok_G0Q" name="fbFilter2D_mde" specification="_7LbtwJE_EeqXzolMok_G0Q">
+      <ownedParameter xmi:id="_3LyBUZE_EeqXzolMok_G0Q" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_3LyBUpE_EeqXzolMok_G0Q" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <body>using namespace cv;
+
+std::cout&lt;&lt;&quot;Filter 2D&quot; &lt;&lt; std::endl;
+
+int ddepth = -1 ;
+Mat kernel;
+Point anchor = Point(-1,-1);
+double delta = 0;
+int borderType = BORDER_CONSTANT;
+
+if( inputImage->empty() )
+{
+  printf(&quot; No data entered, please enter the path to an image file \n&quot;);
+}
+
+/// Update kernel size for a normalized box filter
+int ind = 2;
+int kernel_size;
+kernel_size = 3 + 2*( ind%5 );
+kernel = Mat::ones( kernel_size, kernel_size, CV_32F )/ (float)(kernel_size*kernel_size);
+
+outputImage = inputImage;
+
+filter2D(
+		*inputImage,
+		*outputImage,
+		ddepth,
+		kernel,
+		anchor,
+		delta,
+		borderType
+	);
+</body>
+      <body>#include &lt;iostream>
+#include &quot;opencv2/opencv.hpp&quot;
+</body>
+      <body>libopencv_core
+libopencv_imgproc
+libopencv_highgui
+libopencv_imgcodecs</body>
+    </ownedBehavior>
     <ownedOperation xmi:id="_Ide5sFC1Eeq1EqXxxN7UeQ" name="addBorder" method="_S5MioE6cEeqyNvPDU5XeYA">
       <ownedParameter xmi:id="__SxAIFDAEeq9rLGcLmUOPg" name="inputImage">
-        <type xmi:type="uml:Class" href="../../UMatData/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_YjR4sJEYEeqvZ7mBc2P9AQ" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_Bx5gkFC3Eeq1EqXxxN7UeQ" name="loadImage" method="_EBJJ4FC4Eeq1EqXxxN7UeQ">
       <ownedParameter xmi:id="_rZEHQFC_Eeq9rLGcLmUOPg" name="outputImage" direction="return">
-        <type xmi:type="uml:Class" href="../../UMatData/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-        <defaultValue xmi:type="uml:LiteralString" xmi:id="_rZEuUFC_Eeq9rLGcLmUOPg"/>
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_aj080I02Eeq0h-SaVz8HEQ" name="saveImage" method="_vgNugJEYEeqvZ7mBc2P9AQ">
+      <ownedParameter xmi:id="_Rh9LAJEYEeqvZ7mBc2P9AQ" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_9nlGQJEiEeqn6NSw2h6Cow" name="showImage" method="_1evW4JEiEeqn6NSw2h6Cow">
+      <ownedParameter xmi:id="_C9c-wJEjEeqn6NSw2h6Cow" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_lgz0YJE_EeqXzolMok_G0Q" name="gaussianBlur" method="_XJgXoJE_EeqXzolMok_G0Q">
+      <ownedParameter xmi:id="_oupCUJE_EeqXzolMok_G0Q" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_rFzuAJE_EeqXzolMok_G0Q" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_7LbtwJE_EeqXzolMok_G0Q" name="filter2D_mde" visibility="public" method="_3LyBUJE_EeqXzolMok_G0Q">
+      <ownedParameter xmi:id="_7LbtwZE_EeqXzolMok_G0Q" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_7LbtwpE_EeqXzolMok_G0Q" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
