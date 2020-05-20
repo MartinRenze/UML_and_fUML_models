@@ -7,15 +7,12 @@
     <ownedAttribute xmi:id="_JXK0MJnGEeq36Op0knvQww" name="functionObject">
       <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_MVkcwE4aEeiTBv0OlW4vQw"/>
     </ownedAttribute>
-    <ownedBehavior xmi:type="uml:Activity" xmi:id="_M7SAoE4UEeiTBv0OlW4vQw" name="imageBorderTest2" classifierBehavior="_jP940JmzEeqKE41wof_GIQ" node="_OIBgkE4UEeiTBv0OlW4vQw _kIosQE69Eei1I7Gq89eF_Q _J-MzoFC3Eeq1EqXxxN7UeQ _3gDUwIjGEeqq9OVwrY9agA _kuLbgI03Eeq0h-SaVz8HEQ _xwC7wJEbEeqvZ7mBc2P9AQ _gGZD0JEjEeqn6NSw2h6Cow _6nMB8JEjEeqn6NSw2h6Cow _QTAhMJlTEeqJw5TL-vzV6w">
-      <ownedBehavior xmi:type="uml:Activity" xmi:id="_jP940JmzEeqKE41wof_GIQ" name="hprintACtivity" node="_x_j5wJmzEeqKE41wof_GIQ _0X7fUJmzEeqKE41wof_GIQ _12B1AJmzEeqKE41wof_GIQ _1vWEkJm7EeqKE41wof_GIQ _3eGFYZm7EeqKE41wof_GIQ _Luw2UJnJEeq36Op0knvQww">
-        <ownedParameter xmi:id="_1vVdgJm7EeqKE41wof_GIQ" name="Parameter1">
-          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-        </ownedParameter>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_M7SAoE4UEeiTBv0OlW4vQw" name="imageBorderTest2" node="_OIBgkE4UEeiTBv0OlW4vQw _kIosQE69Eei1I7Gq89eF_Q _6nMB8JEjEeqn6NSw2h6Cow _QTAhMJlTEeqJw5TL-vzV6w _cj0pgJp6EeqyUb1R12fPNA _kKDbEJp6EeqyUb1R12fPNA _nYo28Jp6EeqyUb1R12fPNA">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_jP940JmzEeqKE41wof_GIQ" name="activityLoadImage" node="_x_j5wJmzEeqKE41wof_GIQ _0X7fUJmzEeqKE41wof_GIQ _3eGFYZm7EeqKE41wof_GIQ _Luw2UJnJEeq36Op0knvQww">
         <ownedParameter xmi:id="_3eGFYJm7EeqKE41wof_GIQ" name="Parameter2" direction="return">
           <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </ownedParameter>
-        <edge xmi:type="uml:ControlFlow" xmi:id="_7x5WgJmzEeqKE41wof_GIQ" target="_12B1AJmzEeqKE41wof_GIQ" source="_x_j5wJmzEeqKE41wof_GIQ">
+        <edge xmi:type="uml:ControlFlow" xmi:id="_7x5WgJmzEeqKE41wof_GIQ" target="_Luw2UJnJEeq36Op0knvQww" source="_x_j5wJmzEeqKE41wof_GIQ">
           <guard xmi:type="uml:LiteralBoolean" xmi:id="_7x5WgZmzEeqKE41wof_GIQ" name="Initial1Sub_To_tempSub_cba_guard" value="true"/>
           <weight xmi:type="uml:LiteralInteger" xmi:id="_7x59kJmzEeqKE41wof_GIQ" name="Initial1Sub_To_tempSub_cba_weight"/>
         </edge>
@@ -23,93 +20,147 @@
           <guard xmi:type="uml:LiteralBoolean" xmi:id="_8KrC4ZmzEeqKE41wof_GIQ" name="tempSub_cba_To_ActivityFinal1Sub_guard" value="true"/>
           <weight xmi:type="uml:LiteralInteger" xmi:id="_8Krp8JmzEeqKE41wof_GIQ" name="tempSub_cba_To_ActivityFinal1Sub_weight"/>
         </edge>
-        <edge xmi:type="uml:ObjectFlow" xmi:id="_573IUJm7EeqKE41wof_GIQ" name="edit1" target="_HerqwJnVEeqng5JzaHO1Fw" source="_1vWEkJm7EeqKE41wof_GIQ"/>
         <edge xmi:type="uml:ObjectFlow" xmi:id="_cu53MJnBEeqKE41wof_GIQ" name="edit2" target="_3eGFYZm7EeqKE41wof_GIQ" source="_Ju5Z4JnVEeqng5JzaHO1Fw"/>
-        <edge xmi:type="uml:ControlFlow" xmi:id="_N9_jcJnIEeq36Op0knvQww" target="_Luw2UJnJEeq36Op0knvQww" source="_12B1AJmzEeqKE41wof_GIQ">
-          <guard xmi:type="uml:LiteralBoolean" xmi:id="_N-AKgJnIEeq36Op0knvQww" name="tempSub_cba_To_CreateObjectAction1_guard" value="true"/>
-          <weight xmi:type="uml:LiteralInteger" xmi:id="_N-AKgZnIEeq36Op0knvQww" name="tempSub_cba_To_CreateObjectAction1_weight"/>
-        </edge>
         <node xmi:type="uml:InitialNode" xmi:id="_x_j5wJmzEeqKE41wof_GIQ" name="Initial1Sub" outgoing="_7x5WgJmzEeqKE41wof_GIQ"/>
         <node xmi:type="uml:ActivityFinalNode" xmi:id="_0X7fUJmzEeqKE41wof_GIQ" name="ActivityFinal1Sub" incoming="_8KrC4JmzEeqKE41wof_GIQ"/>
-        <node xmi:type="uml:CallBehaviorAction" xmi:id="_12B1AJmzEeqKE41wof_GIQ" name="tempSub_cba" incoming="_7x5WgJmzEeqKE41wof_GIQ" outgoing="_N9_jcJnIEeq36Op0knvQww" behavior="_vPfZwJlOEeqJw5TL-vzV6w"/>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_1vWEkJm7EeqKE41wof_GIQ" name="Parameter1" outgoing="_573IUJm7EeqKE41wof_GIQ" parameter="_1vVdgJm7EeqKE41wof_GIQ">
-          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_1vWroJm7EeqKE41wof_GIQ" value="1"/>
-        </node>
         <node xmi:type="uml:ActivityParameterNode" xmi:id="_3eGFYZm7EeqKE41wof_GIQ" name="Parameter2" incoming="_cu53MJnBEeqKE41wof_GIQ" parameter="_3eGFYJm7EeqKE41wof_GIQ">
           <upperBound xmi:type="uml:LiteralInteger" xmi:id="_3eGFYpm7EeqKE41wof_GIQ" value="1"/>
         </node>
-        <node xmi:type="uml:CallBehaviorAction" xmi:id="_Luw2UJnJEeq36Op0knvQww" name="tempInnertest_cba" incoming="_N9_jcJnIEeq36Op0knvQww" outgoing="_8KrC4JmzEeqKE41wof_GIQ">
-          <argument xmi:id="_HerqwJnVEeqng5JzaHO1Fw" name="inputImage" incoming="_573IUJm7EeqKE41wof_GIQ">
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_Luw2UJnJEeq36Op0knvQww" name="tempInnertest_cba" incoming="_7x5WgJmzEeqKE41wof_GIQ" outgoing="_8KrC4JmzEeqKE41wof_GIQ">
+          <result xmi:id="_Ju5Z4JnVEeqng5JzaHO1Fw" name="outputImage" outgoing="_cu53MJnBEeqKE41wof_GIQ">
+            <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+          </result>
+          <behavior xmi:type="uml:FunctionBehavior" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_EBJJ4FC4Eeq1EqXxxN7UeQ"/>
+        </node>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_GMWGoJp5EeqyUb1R12fPNA" name="activityAddBorder" node="_GMWtvZp5EeqyUb1R12fPNA _GMWtvpp5EeqyUb1R12fPNA _GMWtv5p5EeqyUb1R12fPNA _GMWtwJp5EeqyUb1R12fPNA _GMWtwpp5EeqyUb1R12fPNA _GMWtxJp5EeqyUb1R12fPNA">
+        <ownedParameter xmi:id="_GMWtsJp5EeqyUb1R12fPNA" name="Parameter1">
+          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_GMWtsZp5EeqyUb1R12fPNA" name="Parameter2" direction="return">
+          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        </ownedParameter>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_GMWtspp5EeqyUb1R12fPNA" target="_GMWtv5p5EeqyUb1R12fPNA" source="_GMWtvZp5EeqyUb1R12fPNA">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_GMWts5p5EeqyUb1R12fPNA" name="Initial1Sub_To_tempSub_cba_guard" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_GMWttJp5EeqyUb1R12fPNA" name="Initial1Sub_To_tempSub_cba_weight"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_GMWttZp5EeqyUb1R12fPNA" target="_GMWtvpp5EeqyUb1R12fPNA" source="_GMWtxJp5EeqyUb1R12fPNA">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_GMWttpp5EeqyUb1R12fPNA" name="tempSub_cba_To_ActivityFinal1Sub_guard" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_GMWtt5p5EeqyUb1R12fPNA" name="tempSub_cba_To_ActivityFinal1Sub_weight"/>
+        </edge>
+        <edge xmi:type="uml:ObjectFlow" xmi:id="_GMWtuJp5EeqyUb1R12fPNA" name="edit1" target="_GMWtxZp5EeqyUb1R12fPNA" source="_GMWtwJp5EeqyUb1R12fPNA"/>
+        <edge xmi:type="uml:ObjectFlow" xmi:id="_GMWtuZp5EeqyUb1R12fPNA" name="edit2" target="_GMWtwpp5EeqyUb1R12fPNA" source="_GMWtxpp5EeqyUb1R12fPNA"/>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_GMWtupp5EeqyUb1R12fPNA" target="_GMWtxJp5EeqyUb1R12fPNA" source="_GMWtv5p5EeqyUb1R12fPNA">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_GMWtu5p5EeqyUb1R12fPNA" name="tempSub_cba_To_CreateObjectAction1_guard" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_GMWtvJp5EeqyUb1R12fPNA" name="tempSub_cba_To_CreateObjectAction1_weight"/>
+        </edge>
+        <node xmi:type="uml:InitialNode" xmi:id="_GMWtvZp5EeqyUb1R12fPNA" name="Initial1Sub" outgoing="_GMWtspp5EeqyUb1R12fPNA"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_GMWtvpp5EeqyUb1R12fPNA" name="ActivityFinal1Sub" incoming="_GMWttZp5EeqyUb1R12fPNA"/>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_GMWtv5p5EeqyUb1R12fPNA" name="tempSub_cba" incoming="_GMWtspp5EeqyUb1R12fPNA" outgoing="_GMWtupp5EeqyUb1R12fPNA" behavior="_vPfZwJlOEeqJw5TL-vzV6w"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_GMWtwJp5EeqyUb1R12fPNA" name="Parameter1" outgoing="_GMWtuJp5EeqyUb1R12fPNA" parameter="_GMWtsJp5EeqyUb1R12fPNA">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_GMWtwZp5EeqyUb1R12fPNA" value="1"/>
+        </node>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_GMWtwpp5EeqyUb1R12fPNA" name="Parameter2" incoming="_GMWtuZp5EeqyUb1R12fPNA" parameter="_GMWtsZp5EeqyUb1R12fPNA">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_GMWtw5p5EeqyUb1R12fPNA" value="1"/>
+        </node>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_GMWtxJp5EeqyUb1R12fPNA" name="tempInnertest_cba" incoming="_GMWtupp5EeqyUb1R12fPNA" outgoing="_GMWttZp5EeqyUb1R12fPNA">
+          <argument xmi:id="_GMWtxZp5EeqyUb1R12fPNA" name="inputImage" incoming="_GMWtuJp5EeqyUb1R12fPNA">
             <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
           </argument>
-          <result xmi:id="_Ju5Z4JnVEeqng5JzaHO1Fw" name="outputImage" outgoing="_cu53MJnBEeqKE41wof_GIQ">
+          <result xmi:id="_GMWtxpp5EeqyUb1R12fPNA" name="outputImage" outgoing="_GMWtuZp5EeqyUb1R12fPNA">
             <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
           </result>
           <behavior xmi:type="uml:FunctionBehavior" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_S5MioE6cEeqyNvPDU5XeYA"/>
         </node>
       </ownedBehavior>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_NFTugFC3Eeq1EqXxxN7UeQ" target="_J-MzoFC3Eeq1EqXxxN7UeQ" source="_3gDUwIjGEeqq9OVwrY9agA"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_N7SUQFC3Eeq1EqXxxN7UeQ" target="_xwC7wJEbEeqvZ7mBc2P9AQ" source="_J-MzoFC3Eeq1EqXxxN7UeQ"/>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_qcfHEFC7EeqcOK2DUAL-Pw" name="image" target="_6nMB8JEjEeqn6NSw2h6Cow" source="_emE5wFC7EeqcOK2DUAL-Pw"/>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_7ZlVoIjHEeqq9OVwrY9agA" name="functionsObjectFlow" target="_kuLbgI03Eeq0h-SaVz8HEQ" source="_OW4ikIjHEeqq9OVwrY9agA"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_WK6NoIjJEeqq9OVwrY9agA" target="_3gDUwIjGEeqq9OVwrY9agA" source="_OIBgkE4UEeiTBv0OlW4vQw"/>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_yPj84I03Eeq0h-SaVz8HEQ" name="functionsObjectFlow3" target="_J-MzoVC3Eeq1EqXxxN7UeQ" source="_kuLbgI03Eeq0h-SaVz8HEQ"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="__xhScJEbEeqvZ7mBc2P9AQ" target="_kIosQE69Eei1I7Gq89eF_Q" source="_gGZD0JEjEeqn6NSw2h6Cow">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_GxjFcJp5EeqyUb1R12fPNA" name="activitySaveImage" node="_GxjFfpp5EeqyUb1R12fPNA _GxjFf5p5EeqyUb1R12fPNA _GxjFgZp5EeqyUb1R12fPNA _GxjFhZp5EeqyUb1R12fPNA">
+        <ownedParameter xmi:id="_GxjFcZp5EeqyUb1R12fPNA" name="Parameter1">
+          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        </ownedParameter>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_GxjFc5p5EeqyUb1R12fPNA" target="_GxjFhZp5EeqyUb1R12fPNA" source="_GxjFfpp5EeqyUb1R12fPNA">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_GxjFdJp5EeqyUb1R12fPNA" name="Initial1Sub_To_tempSub_cba_guard" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_GxjFdZp5EeqyUb1R12fPNA" name="Initial1Sub_To_tempSub_cba_weight"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_GxjFdpp5EeqyUb1R12fPNA" target="_GxjFf5p5EeqyUb1R12fPNA" source="_GxjFhZp5EeqyUb1R12fPNA">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_GxjFd5p5EeqyUb1R12fPNA" name="tempSub_cba_To_ActivityFinal1Sub_guard" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_GxjFeJp5EeqyUb1R12fPNA" name="tempSub_cba_To_ActivityFinal1Sub_weight"/>
+        </edge>
+        <edge xmi:type="uml:ObjectFlow" xmi:id="_GxjFeZp5EeqyUb1R12fPNA" name="edit1" target="_GxjFhpp5EeqyUb1R12fPNA" source="_GxjFgZp5EeqyUb1R12fPNA"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_GxjFfpp5EeqyUb1R12fPNA" name="Initial1Sub" outgoing="_GxjFc5p5EeqyUb1R12fPNA"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_GxjFf5p5EeqyUb1R12fPNA" name="ActivityFinal1Sub" incoming="_GxjFdpp5EeqyUb1R12fPNA"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_GxjFgZp5EeqyUb1R12fPNA" name="Parameter1" outgoing="_GxjFeZp5EeqyUb1R12fPNA" parameter="_GxjFcZp5EeqyUb1R12fPNA">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_GxjFgpp5EeqyUb1R12fPNA" value="1"/>
+        </node>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_GxjFhZp5EeqyUb1R12fPNA" name="tempInnertest_cba" incoming="_GxjFc5p5EeqyUb1R12fPNA" outgoing="_GxjFdpp5EeqyUb1R12fPNA">
+          <argument xmi:id="_GxjFhpp5EeqyUb1R12fPNA" name="inputImage" incoming="_GxjFeZp5EeqyUb1R12fPNA">
+            <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+          </argument>
+          <behavior xmi:type="uml:FunctionBehavior" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_vgNugJEYEeqvZ7mBc2P9AQ"/>
+        </node>
+      </ownedBehavior>
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_HaCBwJp5EeqyUb1R12fPNA" name="activityShowImage" node="_HaCBzpp5EeqyUb1R12fPNA _HaCBz5p5EeqyUb1R12fPNA _HaCB0Zp5EeqyUb1R12fPNA _HaCB1Zp5EeqyUb1R12fPNA">
+        <ownedParameter xmi:id="_HaCBwZp5EeqyUb1R12fPNA" name="Parameter1">
+          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        </ownedParameter>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_HaCBw5p5EeqyUb1R12fPNA" target="_HaCB1Zp5EeqyUb1R12fPNA" source="_HaCBzpp5EeqyUb1R12fPNA">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_HaCBxJp5EeqyUb1R12fPNA" name="Initial1Sub_To_tempSub_cba_guard" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_HaCBxZp5EeqyUb1R12fPNA" name="Initial1Sub_To_tempSub_cba_weight"/>
+        </edge>
+        <edge xmi:type="uml:ControlFlow" xmi:id="_HaCBxpp5EeqyUb1R12fPNA" target="_HaCBz5p5EeqyUb1R12fPNA" source="_HaCB1Zp5EeqyUb1R12fPNA">
+          <guard xmi:type="uml:LiteralBoolean" xmi:id="_HaCBx5p5EeqyUb1R12fPNA" name="tempSub_cba_To_ActivityFinal1Sub_guard" value="true"/>
+          <weight xmi:type="uml:LiteralInteger" xmi:id="_HaCByJp5EeqyUb1R12fPNA" name="tempSub_cba_To_ActivityFinal1Sub_weight"/>
+        </edge>
+        <edge xmi:type="uml:ObjectFlow" xmi:id="_HaCByZp5EeqyUb1R12fPNA" name="edit1" target="_HaCB1pp5EeqyUb1R12fPNA" source="_HaCB0Zp5EeqyUb1R12fPNA"/>
+        <node xmi:type="uml:InitialNode" xmi:id="_HaCBzpp5EeqyUb1R12fPNA" name="Initial1Sub" outgoing="_HaCBw5p5EeqyUb1R12fPNA"/>
+        <node xmi:type="uml:ActivityFinalNode" xmi:id="_HaCBz5p5EeqyUb1R12fPNA" name="ActivityFinal1Sub" incoming="_HaCBxpp5EeqyUb1R12fPNA"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_HaCB0Zp5EeqyUb1R12fPNA" name="Parameter1" outgoing="_HaCByZp5EeqyUb1R12fPNA" parameter="_HaCBwZp5EeqyUb1R12fPNA">
+          <upperBound xmi:type="uml:LiteralInteger" xmi:id="_HaCB0pp5EeqyUb1R12fPNA" value="1"/>
+        </node>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_HaCB1Zp5EeqyUb1R12fPNA" name="tempInnertest_cba" incoming="_HaCBw5p5EeqyUb1R12fPNA" outgoing="_HaCBxpp5EeqyUb1R12fPNA">
+          <argument xmi:id="_HaCB1pp5EeqyUb1R12fPNA" name="inputImage" incoming="_HaCByZp5EeqyUb1R12fPNA">
+            <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+          </argument>
+          <behavior xmi:type="uml:FunctionBehavior" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_1evW4JEiEeqn6NSw2h6Cow"/>
+        </node>
+      </ownedBehavior>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_N7SUQFC3Eeq1EqXxxN7UeQ" target="_QTAhMJlTEeqJw5TL-vzV6w" source="_nYo28Jp6EeqyUb1R12fPNA"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_qcfHEFC7EeqcOK2DUAL-Pw" name="image" target="_6nMB8JEjEeqn6NSw2h6Cow" source="_LgRaQJm8EeqKE41wof_GIQ"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_WK6NoIjJEeqq9OVwrY9agA" target="_nYo28Jp6EeqyUb1R12fPNA" source="_OIBgkE4UEeiTBv0OlW4vQw"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="__xhScJEbEeqvZ7mBc2P9AQ" target="_kIosQE69Eei1I7Gq89eF_Q" source="_cj0pgJp6EeqyUb1R12fPNA">
         <weight xmi:type="uml:LiteralInteger" xmi:id="__xigkJEbEeqvZ7mBc2P9AQ" name="saveImage_call_To_ActivityFinal2_weight"/>
       </edge>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_KT6TIJEcEeqvZ7mBc2P9AQ" target="_FPRUkJEcEeqvZ7mBc2P9AQ" source="_kuLbgI03Eeq0h-SaVz8HEQ"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_L4fKoJEkEeqn6NSw2h6Cow" target="_QTAhMJlTEeqJw5TL-vzV6w" source="_xwC7wJEbEeqvZ7mBc2P9AQ">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_L4fKoJEkEeqn6NSw2h6Cow" target="_kKDbEJp6EeqyUb1R12fPNA" source="_QTAhMJlTEeqJw5TL-vzV6w">
         <weight xmi:type="uml:LiteralInteger" xmi:id="_L4g_0JEkEeqn6NSw2h6Cow" name="saveImage_call_To_showImage_call_weight"/>
       </edge>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_zKCecJEkEeqn6NSw2h6Cow" name="edit" target="_KS8rgJm8EeqKE41wof_GIQ" source="_6nMB8JEjEeqn6NSw2h6Cow"/>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_4tzB8JEkEeqn6NSw2h6Cow" target="_xwDi0JEbEeqvZ7mBc2P9AQ" source="_6nMB8JEjEeqn6NSw2h6Cow"/>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_sTlukJElEeqn6NSw2h6Cow" target="_gGaR8JEjEeqn6NSw2h6Cow" source="_kuLbgI03Eeq0h-SaVz8HEQ"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_D9K1MJm8EeqKE41wof_GIQ" target="_gGZD0JEjEeqn6NSw2h6Cow" source="_QTAhMJlTEeqJw5TL-vzV6w">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_D9K1MJm8EeqKE41wof_GIQ" target="_cj0pgJp6EeqyUb1R12fPNA" source="_kKDbEJp6EeqyUb1R12fPNA">
         <weight xmi:type="uml:LiteralInteger" xmi:id="_D9LcQZm8EeqKE41wof_GIQ" name="print_call_To_showImage_call_weight"/>
       </edge>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_sPzykJm8EeqKE41wof_GIQ" name="edit2" target="_ko4XkJEjEeqn6NSw2h6Cow" source="_LgRaQJm8EeqKE41wof_GIQ"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_TMJ6EJp7EeqyUb1R12fPNA" target="_KS8rgJm8EeqKE41wof_GIQ" source="_zgic4Jp6EeqyUb1R12fPNA"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_nRbmQJp7EeqyUb1R12fPNA" target="_xURZoJp6EeqyUb1R12fPNA" source="_6nMB8JEjEeqn6NSw2h6Cow"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_oC-X8Jp7EeqyUb1R12fPNA" target="_up9IcJp6EeqyUb1R12fPNA" source="_6nMB8JEjEeqn6NSw2h6Cow"/>
       <node xmi:type="uml:InitialNode" xmi:id="_OIBgkE4UEeiTBv0OlW4vQw" name="Initial1" outgoing="_WK6NoIjJEeqq9OVwrY9agA"/>
       <node xmi:type="uml:ActivityFinalNode" xmi:id="_kIosQE69Eei1I7Gq89eF_Q" name="ActivityFinal2" incoming="__xhScJEbEeqvZ7mBc2P9AQ"/>
-      <node xmi:type="uml:CallOperationAction" xmi:id="_J-MzoFC3Eeq1EqXxxN7UeQ" name="loadImage_call" incoming="_NFTugFC3Eeq1EqXxxN7UeQ" outgoing="_N7SUQFC3Eeq1EqXxxN7UeQ">
-        <result xmi:id="_emE5wFC7EeqcOK2DUAL-Pw" name="outputImage" outgoing="_qcfHEFC7EeqcOK2DUAL-Pw">
+      <node xmi:type="uml:ForkNode" xmi:id="_6nMB8JEjEeqn6NSw2h6Cow" name="Fork2" incoming="_qcfHEFC7EeqcOK2DUAL-Pw" outgoing="_nRbmQJp7EeqyUb1R12fPNA _oC-X8Jp7EeqyUb1R12fPNA"/>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_QTAhMJlTEeqJw5TL-vzV6w" name="AddBorder_callBA" incoming="_N7SUQFC3Eeq1EqXxxN7UeQ" outgoing="_L4fKoJEkEeqn6NSw2h6Cow" behavior="_GMWGoJp5EeqyUb1R12fPNA">
+        <argument xmi:id="_KS8rgJm8EeqKE41wof_GIQ" name="Parameter1" incoming="_TMJ6EJp7EeqyUb1R12fPNA">
+          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        </argument>
+        <result xmi:id="_LgRaQJm8EeqKE41wof_GIQ" name="Parameter3" outgoing="_qcfHEFC7EeqcOK2DUAL-Pw">
           <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </result>
-        <operation href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_Bx5gkFC3Eeq1EqXxxN7UeQ"/>
-        <target xmi:id="_J-MzoVC3Eeq1EqXxxN7UeQ" name="inputFunctionsPin" incoming="_yPj84I03Eeq0h-SaVz8HEQ">
-          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_MVkcwE4aEeiTBv0OlW4vQw"/>
-        </target>
       </node>
-      <node xmi:type="uml:CreateObjectAction" xmi:id="_3gDUwIjGEeqq9OVwrY9agA" name="Create Functions" incoming="_WK6NoIjJEeqq9OVwrY9agA" outgoing="_NFTugFC3Eeq1EqXxxN7UeQ">
-        <classifier xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_MVkcwE4aEeiTBv0OlW4vQw"/>
-        <result xmi:id="_OW4ikIjHEeqq9OVwrY9agA" name="result" outgoing="_7ZlVoIjHEeqq9OVwrY9agA">
-          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_MVkcwE4aEeiTBv0OlW4vQw"/>
-        </result>
-      </node>
-      <node xmi:type="uml:ForkNode" xmi:id="_kuLbgI03Eeq0h-SaVz8HEQ" name="Fork Function Object" incoming="_7ZlVoIjHEeqq9OVwrY9agA" outgoing="_yPj84I03Eeq0h-SaVz8HEQ _KT6TIJEcEeqvZ7mBc2P9AQ _sTlukJElEeqn6NSw2h6Cow"/>
-      <node xmi:type="uml:CallOperationAction" xmi:id="_xwC7wJEbEeqvZ7mBc2P9AQ" name="saveImage_call" incoming="_N7SUQFC3Eeq1EqXxxN7UeQ" outgoing="_L4fKoJEkEeqn6NSw2h6Cow">
-        <argument xmi:id="_xwDi0JEbEeqvZ7mBc2P9AQ" name="inputImage" incoming="_4tzB8JEkEeqn6NSw2h6Cow">
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_cj0pgJp6EeqyUb1R12fPNA" name="showImageCallBA" incoming="_D9K1MJm8EeqKE41wof_GIQ" outgoing="__xhScJEbEeqvZ7mBc2P9AQ" behavior="_HaCBwJp5EeqyUb1R12fPNA">
+        <argument xmi:id="_up9IcJp6EeqyUb1R12fPNA" name="inputImage" incoming="_oC-X8Jp7EeqyUb1R12fPNA">
           <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </argument>
-        <operation href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_aj080I02Eeq0h-SaVz8HEQ"/>
-        <target xmi:id="_FPRUkJEcEeqvZ7mBc2P9AQ" name="Input_1" incoming="_KT6TIJEcEeqvZ7mBc2P9AQ">
-          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_MVkcwE4aEeiTBv0OlW4vQw"/>
-        </target>
       </node>
-      <node xmi:type="uml:CallOperationAction" xmi:id="_gGZD0JEjEeqn6NSw2h6Cow" name="showImage_call" incoming="_D9K1MJm8EeqKE41wof_GIQ" outgoing="__xhScJEbEeqvZ7mBc2P9AQ">
-        <argument xmi:id="_ko4XkJEjEeqn6NSw2h6Cow" name="inputImage" incoming="_sPzykJm8EeqKE41wof_GIQ">
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_kKDbEJp6EeqyUb1R12fPNA" name="saveImageCallBA" incoming="_L4fKoJEkEeqn6NSw2h6Cow" outgoing="_D9K1MJm8EeqKE41wof_GIQ" behavior="_GxjFcJp5EeqyUb1R12fPNA">
+        <argument xmi:id="_xURZoJp6EeqyUb1R12fPNA" name="inutImage" incoming="_nRbmQJp7EeqyUb1R12fPNA">
           <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </argument>
-        <operation href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_9nlGQJEiEeqn6NSw2h6Cow"/>
-        <target xmi:id="_gGaR8JEjEeqn6NSw2h6Cow" name="target" incoming="_sTlukJElEeqn6NSw2h6Cow">
-          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_MVkcwE4aEeiTBv0OlW4vQw"/>
-        </target>
       </node>
-      <node xmi:type="uml:ForkNode" xmi:id="_6nMB8JEjEeqn6NSw2h6Cow" name="Fork2" incoming="_qcfHEFC7EeqcOK2DUAL-Pw" outgoing="_zKCecJEkEeqn6NSw2h6Cow _4tzB8JEkEeqn6NSw2h6Cow"/>
-      <node xmi:type="uml:CallBehaviorAction" xmi:id="_QTAhMJlTEeqJw5TL-vzV6w" name="print_call" incoming="_L4fKoJEkEeqn6NSw2h6Cow" outgoing="_D9K1MJm8EeqKE41wof_GIQ" behavior="_jP940JmzEeqKE41wof_GIQ">
-        <argument xmi:id="_KS8rgJm8EeqKE41wof_GIQ" name="Parameter1" incoming="_zKCecJEkEeqn6NSw2h6Cow">
-          <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-        </argument>
-        <result xmi:id="_LgRaQJm8EeqKE41wof_GIQ" name="Parameter3" outgoing="_sPzykJm8EeqKE41wof_GIQ">
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_nYo28Jp6EeqyUb1R12fPNA" name="loadImageCallBA" incoming="_WK6NoIjJEeqq9OVwrY9agA" outgoing="_N7SUQFC3Eeq1EqXxxN7UeQ" behavior="_jP940JmzEeqKE41wof_GIQ">
+        <result xmi:id="_zgic4Jp6EeqyUb1R12fPNA" name="outputImage" outgoing="_TMJ6EJp7EeqyUb1R12fPNA">
           <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </result>
       </node>
