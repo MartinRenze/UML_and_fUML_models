@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="MRncdw6D.AACAUih" name="opencv2">
+  <eAnnotations xmi:id="_oNJXwG2xEeqnxKQ0JDuZZw" source="http://sse.tu-ilmenau.de/codegen">
+    <details xmi:id="_qGBk8G2xEeqnxKQ0JDuZZw" key="doNotGenerate" value="true"/>
+  </eAnnotations>
+  <packageImport xmi:id="_rgWIkLArEeert7O7oCVCsA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Model" xmi:id="_QDNwQIFuEeqrFquCAMdE4Q" name="core">
+    <packagedElement xmi:type="uml:Class" xmi:id="7TR_Ew6D.AACAWC1" name="UMatData" visibility="public">
+      <ownedAttribute xmi:id="PTR_Ew6D.AACAWDI" name="prevAllocator" visibility="public" type="25R_Ew6D.AACAVjy"/>
+      <ownedAttribute xmi:id="vTR_Ew6D.AACAWDJ" name="currAllocator" visibility="public" type="25R_Ew6D.AACAVjy"/>
+      <ownedAttribute xmi:id="vTR_Ew6D.AACAWDK" name="urefcount" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="vTR_Ew6D.AACAWDL" name="refcount" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="vTR_Ew6D.AACAWDM" name="data" visibility="public" type="uchar_id"/>
+      <ownedAttribute xmi:id="fTR_Ew6D.AACAWDN" name="origdata" visibility="public" type="uchar_id"/>
+      <ownedAttribute xmi:id="fTR_Ew6D.AACAWDO" name="size" visibility="public" type="size_t_id"/>
+      <ownedAttribute xmi:id="fTR_Ew6D.AACAWDP" name="flags" visibility="public" type="HTR_Ew6D.AACAWC3"/>
+      <ownedAttribute xmi:id="_TR_Ew6D.AACAWDS" name="allocatorFlags_" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TR_Ew6D.AACAWDT" name="mapcount" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="AzR_Ew6D.AACAWDU" name="originalUMatData" visibility="public" type="7TR_Ew6D.AACAWC1"/>
+      <ownedAttribute xmi:id="fTR_Ew6D.AACAWDQ" name="handle" visibility="public" type="void_id"/>
+      <ownedAttribute xmi:id="_TR_Ew6D.AACAWDR" name="userdata" visibility="public" type="void_id"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="HTR_Ew6D.AACAWC3" name="MemoryFlag" visibility="public" isActive="false">
+      <ownedLiteral xmi:id="nTR_Ew6D.AACAWC4" name="COPY_ON_MAP">
+        <specification xmi:type="uml:LiteralString" xmi:id="nTR_Ew6D.AACAWC5" value="1"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="nTR_Ew6D.AACAWC6" name="HOST_COPY_OBSOLETE">
+        <specification xmi:type="uml:LiteralString" xmi:id="nTR_Ew6D.AACAWC7" value="2"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="XTR_Ew6D.AACAWC8" name="DEVICE_COPY_OBSOLETE">
+        <specification xmi:type="uml:LiteralString" xmi:id="XTR_Ew6D.AACAWC9" value="4"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="XTR_Ew6D.AACAWC." name="TEMP_UMAT">
+        <specification xmi:type="uml:LiteralString" xmi:id="XTR_Ew6D.AACAWC_" value="8"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="XTR_Ew6D.AACAWDA" name="TEMP_COPIED_UMAT">
+        <specification xmi:type="uml:LiteralString" xmi:id="3TR_Ew6D.AACAWDB" value="24"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="3TR_Ew6D.AACAWDC" name="USER_ALLOCATED">
+        <specification xmi:type="uml:LiteralString" xmi:id="3TR_Ew6D.AACAWDD" value="32"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="3TR_Ew6D.AACAWDE" name="DEVICE_MEM_MAPPED">
+        <specification xmi:type="uml:LiteralString" xmi:id="PTR_Ew6D.AACAWDF" value="64"/>
+      </ownedLiteral>
+      <ownedLiteral xmi:id="PTR_Ew6D.AACAWDG" name="ASYNC_CLEANUP">
+        <specification xmi:type="uml:LiteralString" xmi:id="PTR_Ew6D.AACAWDH" value="128"/>
+      </ownedLiteral>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="25R_Ew6D.AACAVjy" name="MatAllocator" visibility="public" isAbstract="true">
+      <ownedComment xmi:id="25R_Ew6D.AACAVjy_documentaiton" annotatedElement="25R_Ew6D.AACAVjy">
+        <body>Custom array allocator. </body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="size_t_id" name="size_t" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="uchar_id" name="uchar" visibility="public">
+      <ownedAttribute xmi:id="_TR_Ew6D.SACAWDS" name="ucharAttrib" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="void_id" name="void" visibility="public"/>
+  </packagedElement>
+</uml:Model>

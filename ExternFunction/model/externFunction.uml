@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HhFBwE4UEeiTBv0OlW4vQw" name="externFunction">
+  <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="ExternClass">
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_EBJJ4FC4Eeq1EqXxxN7UeQ" name="fbTestFunction" specification="_Bx5gkFC3Eeq1EqXxxN7UeQ">
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <language>LIBRARY0</language>
+      <language>LIBRARY1</language>
+      <language>LIBRARY2</language>
+      <body>std::cout&lt;&lt;&quot;test ...&quot; &lt;&lt; std::endl;</body>
+      <body>#include &lt;iostream></body>
+    </ownedBehavior>
+    <ownedOperation xmi:id="_Bx5gkFC3Eeq1EqXxxN7UeQ" name="testFunction" method="_EBJJ4FC4Eeq1EqXxxN7UeQ"/>
+  </packagedElement>
+</uml:Model>

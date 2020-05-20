@@ -1,0 +1,10 @@
+
+*.cproject
+
+*.project
+
+*.gradle
+
+*/src_gen/
+
+*generate

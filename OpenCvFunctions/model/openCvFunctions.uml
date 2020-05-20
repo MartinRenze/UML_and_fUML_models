@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HhFBwE4UEeiTBv0OlW4vQw" name="openCvFunctions">
-  <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="OpenCvFunctions" classifierBehavior="_vgNugJEYEeqvZ7mBc2P9AQ">
+  <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="OpenCvFunctions">
     <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_YyT5AE4UEeiTBv0OlW4vQw" name="fbNull">
       <language>CPP</language>
       <body>;</body>
@@ -227,6 +227,53 @@ filter2D(
 libopencv_imgproc
 libopencv_highgui
 libopencv_imgcodecs</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_pyKJwJnPEeq36Op0knvQww" name="parentActivity" node="_1Dde4JnPEeq36Op0knvQww _1zX44JnPEeq36Op0knvQww _rXPbwJnQEeq36Op0knvQww">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_2eSeIJnPEeq36Op0knvQww" target="_rXPbwJnQEeq36Op0knvQww" source="_1Dde4JnPEeq36Op0knvQww">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_2eTFMJnPEeq36Op0knvQww" name="Initial1_To_ActivityFinal1_guard" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_2eTsQJnPEeq36Op0knvQww" name="Initial1_To_ActivityFinal1_weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_uVJXUJnQEeq36Op0knvQww" target="_1zX44JnPEeq36Op0knvQww" source="_rXPbwJnQEeq36Op0knvQww">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_uVJ-YJnQEeq36Op0knvQww" name="tempNull_cba_To_ActivityFinal1_guard" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_uVJ-YZnQEeq36Op0knvQww" name="tempNull_cba_To_ActivityFinal1_weight"/>
+      </edge>
+      <node xmi:type="uml:InitialNode" xmi:id="_1Dde4JnPEeq36Op0knvQww" name="Initial1" outgoing="_2eSeIJnPEeq36Op0knvQww"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_1zX44JnPEeq36Op0knvQww" name="ActivityFinal1" incoming="_uVJXUJnQEeq36Op0knvQww"/>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_rXPbwJnQEeq36Op0knvQww" name="tempNull_cba" incoming="_2eSeIJnPEeq36Op0knvQww" outgoing="_uVJXUJnQEeq36Op0knvQww" behavior="_YyT5AE4UEeiTBv0OlW4vQw"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_-9lGAJnMEeq36Op0knvQww" name="AbActivity" node="_Tx1BMJlCEeqBL4cd1A2Q4g _V3efEJlCEeqBL4cd1A2Q4g _YA97IZlCEeqBL4cd1A2Q4g _aE6I0ZlCEeqBL4cd1A2Q4g _jZSeQJlCEeqBL4cd1A2Q4g">
+      <ownedParameter xmi:id="_YA97IJlCEeqBL4cd1A2Q4g" name="ParameterIn">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_aE6I0JlCEeqBL4cd1A2Q4g" name="ParameterOut" direction="out">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_oOtVEJlCEeqBL4cd1A2Q4g" target="_mcnsYJlCEeqBL4cd1A2Q4g" source="_YA97IZlCEeqBL4cd1A2Q4g"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_G1xlAJlDEeqBL4cd1A2Q4g" target="_aE6I0ZlCEeqBL4cd1A2Q4g" source="_mcnFUJlCEeqBL4cd1A2Q4g"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_Me7l4JlDEeqBL4cd1A2Q4g" target="_jZSeQJlCEeqBL4cd1A2Q4g" source="_Tx1BMJlCEeqBL4cd1A2Q4g">
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_Me8M8JlDEeqBL4cd1A2Q4g" name="Initial1_To_temp_coa_weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_M7qlMJlDEeqBL4cd1A2Q4g" target="_V3efEJlCEeqBL4cd1A2Q4g" source="_jZSeQJlCEeqBL4cd1A2Q4g">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_M7qlMZlDEeqBL4cd1A2Q4g" name="temp_coa_To_ActivityFinal1_guard" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_M7qlMplDEeqBL4cd1A2Q4g" name="temp_coa_To_ActivityFinal1_weight"/>
+      </edge>
+      <node xmi:type="uml:InitialNode" xmi:id="_Tx1BMJlCEeqBL4cd1A2Q4g" name="Initial1" outgoing="_Me7l4JlDEeqBL4cd1A2Q4g"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_V3efEJlCEeqBL4cd1A2Q4g" name="ActivityFinal1" incoming="_M7qlMJlDEeqBL4cd1A2Q4g"/>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_YA97IZlCEeqBL4cd1A2Q4g" name="ParameterIn" outgoing="_oOtVEJlCEeqBL4cd1A2Q4g" parameter="_YA97IJlCEeqBL4cd1A2Q4g">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_YA-iMJlCEeqBL4cd1A2Q4g" value="1"/>
+      </node>
+      <node xmi:type="uml:ActivityParameterNode" xmi:id="_aE6I0ZlCEeqBL4cd1A2Q4g" name="Parameter2" incoming="_G1xlAJlDEeqBL4cd1A2Q4g" parameter="_aE6I0JlCEeqBL4cd1A2Q4g">
+        <upperBound xmi:type="uml:LiteralInteger" xmi:id="_aE6v4JlCEeqBL4cd1A2Q4g" value="1"/>
+      </node>
+      <node xmi:type="uml:CallOperationAction" xmi:id="_jZSeQJlCEeqBL4cd1A2Q4g" name="temp_coa" incoming="_Me7l4JlDEeqBL4cd1A2Q4g" outgoing="_M7qlMJlDEeqBL4cd1A2Q4g" operation="_Ide5sFC1Eeq1EqXxxN7UeQ">
+        <argument xmi:id="_mcnsYJlCEeqBL4cd1A2Q4g" name="inputImage" incoming="_oOtVEJlCEeqBL4cd1A2Q4g">
+          <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        </argument>
+        <result xmi:id="_mcnFUJlCEeqBL4cd1A2Q4g" name="outputImage" outgoing="_G1xlAJlDEeqBL4cd1A2Q4g">
+          <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        </result>
+        <target xmi:id="_jZSeQZlCEeqBL4cd1A2Q4g" name="self" type="_MVkcwE4aEeiTBv0OlW4vQw"/>
+      </node>
     </ownedBehavior>
     <ownedOperation xmi:id="_Ide5sFC1Eeq1EqXxxN7UeQ" name="addBorder" method="_S5MioE6cEeqyNvPDU5XeYA">
       <ownedParameter xmi:id="__SxAIFDAEeq9rLGcLmUOPg" name="inputImage">

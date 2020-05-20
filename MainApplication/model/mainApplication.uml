@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HhFBwE4UEeiTBv0OlW4vQw" name="mainApplication">
+  <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="TestClass">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_M7SAoE4UEeiTBv0OlW4vQw" name="testActivity" node="_OIBgkE4UEeiTBv0OlW4vQw _J-MzoFC3Eeq1EqXxxN7UeQ _jkXawIWXEeqhBbW5dJvf1w">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_rx75IIWXEeqhBbW5dJvf1w" target="_J-MzoFC3Eeq1EqXxxN7UeQ" source="_OIBgkE4UEeiTBv0OlW4vQw">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_rx8gMIWXEeqhBbW5dJvf1w" name="Initial1_To_loadImage_call_guard" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_rx8gMYWXEeqhBbW5dJvf1w" name="Initial1_To_loadImage_call_weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_sKotAIWXEeqhBbW5dJvf1w" target="_jkXawIWXEeqhBbW5dJvf1w" source="_J-MzoFC3Eeq1EqXxxN7UeQ">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_sKotAYWXEeqhBbW5dJvf1w" name="loadImage_call_To_FlowFinal1_guard" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_sKpUEIWXEeqhBbW5dJvf1w" name="loadImage_call_To_FlowFinal1_weight"/>
+      </edge>
+      <node xmi:type="uml:InitialNode" xmi:id="_OIBgkE4UEeiTBv0OlW4vQw" name="Initial1" outgoing="_rx75IIWXEeqhBbW5dJvf1w"/>
+      <node xmi:type="uml:CallOperationAction" xmi:id="_J-MzoFC3Eeq1EqXxxN7UeQ" name="loadImage_call" incoming="_rx75IIWXEeqhBbW5dJvf1w" outgoing="_sKotAIWXEeqhBbW5dJvf1w">
+        <operation href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/ExternFunction/model/externFunction.uml#_Bx5gkFC3Eeq1EqXxxN7UeQ"/>
+        <target xmi:id="_J-MzoVC3Eeq1EqXxxN7UeQ" name="self" type="_MVkcwE4aEeiTBv0OlW4vQw"/>
+      </node>
+      <node xmi:type="uml:FlowFinalNode" xmi:id="_jkXawIWXEeqhBbW5dJvf1w" name="FlowFinal1" incoming="_sKotAIWXEeqhBbW5dJvf1w"/>
+    </ownedBehavior>
+  </packagedElement>
+</uml:Model>
