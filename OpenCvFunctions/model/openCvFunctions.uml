@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HhFBwE4UEeiTBv0OlW4vQw" name="openCvFunctions">
   <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="OpenCvFunctions">
+    <ownedAttribute xmi:id="_h8KkkJrlEeqbjcUD4E1zIg" name="borderValue">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_jsTFcJrlEeqbjcUD4E1zIg" value="20"/>
+    </ownedAttribute>
     <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_YyT5AE4UEeiTBv0OlW4vQw" name="fbNull">
       <language>CPP</language>
       <body>;</body>
@@ -12,6 +16,9 @@
       <ownedParameter xmi:id="_BbExkJEZEeqvZ7mBc2P9AQ" name="outputImage" direction="return">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
+      <ownedParameter xmi:id="_RorooJrdEeqzWLJk_3wCrQ" name="inputVal1">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
       <language>CPP</language>
       <language>INCLUDE</language>
       <language>LIBRARY</language>
@@ -21,6 +28,7 @@
       <body>using namespace cv;
 
 std::cout&lt;&lt;&quot;Add border&quot; &lt;&lt; std::endl;
+std::cout&lt;&lt;&quot;Border: &quot; &lt;&lt; inputVal1 &lt;&lt; std::endl;
 
 int top, bottom, left, right;
 int borderType = BORDER_CONSTANT;
@@ -31,10 +39,11 @@ if( inputImage->empty() )
   printf(&quot; No data entered, please enter the path to an image file \n&quot;);
 }
 
-top = (int) (0.05*(inputImage->rows));
-bottom = (int) (0.05*(inputImage->rows));
-left = (int) (0.05*(inputImage->cols));
-right = (int) (0.05*(inputImage->cols));
+//top = (int) (0.05*(inputImage->rows));
+top = inputVal1;
+bottom = inputVal1;
+left = inputVal1;
+right = inputVal1;
 
 Scalar value( rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255) );
 
@@ -62,7 +71,12 @@ libopencv_imgcodecs</body>
 
 std::cout&lt;&lt;&quot;Bild laden ...&quot; &lt;&lt; std::endl;
 
-const char* image_name = &quot;lena.png&quot;;
+std::string imagePath;
+std::cout&lt;&lt;&quot;Gib den Bildpfad an: &quot;&lt;&lt; std::endl;
+std::cin >> imagePath;
+
+const char* image_name = imagePath.c_str();
+//const char* image_name = &quot;lena.png&quot;;
 // Load Image
 std::shared_ptr&lt;cv::Mat> matPointer = std::make_shared&lt;cv::Mat>(imread( image_name, IMREAD_COLOR ));
 
@@ -230,7 +244,6 @@ libopencv_imgcodecs</body>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:Activity" xmi:id="_pyKJwJnPEeq36Op0knvQww" name="parentActivity" node="_1Dde4JnPEeq36Op0knvQww _1zX44JnPEeq36Op0knvQww _rXPbwJnQEeq36Op0knvQww">
       <edge xmi:type="uml:ControlFlow" xmi:id="_2eSeIJnPEeq36Op0knvQww" target="_rXPbwJnQEeq36Op0knvQww" source="_1Dde4JnPEeq36Op0knvQww">
-        <guard xmi:type="uml:LiteralBoolean" xmi:id="_2eTFMJnPEeq36Op0knvQww" name="Initial1_To_ActivityFinal1_guard" value="true"/>
         <weight xmi:type="uml:LiteralInteger" xmi:id="_2eTsQJnPEeq36Op0knvQww" name="Initial1_To_ActivityFinal1_weight"/>
       </edge>
       <edge xmi:type="uml:ControlFlow" xmi:id="_uVJXUJnQEeq36Op0knvQww" target="_1zX44JnPEeq36Op0knvQww" source="_rXPbwJnQEeq36Op0knvQww">
@@ -244,6 +257,9 @@ libopencv_imgcodecs</body>
     <ownedOperation xmi:id="_Ide5sFC1Eeq1EqXxxN7UeQ" name="addBorder" method="_S5MioE6cEeqyNvPDU5XeYA">
       <ownedParameter xmi:id="__SxAIFDAEeq9rLGcLmUOPg" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_YvHN4JrfEeqzWLJk_3wCrQ" name="inputVal1">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
       <ownedParameter xmi:id="_YjR4sJEYEeqvZ7mBc2P9AQ" name="outputImage" direction="return">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
@@ -280,5 +296,12 @@ libopencv_imgcodecs</body>
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
     </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hve7wJubEeqmZrQbj50kWA" name="Settings" classifierBehavior="_ckrG8JufEeqmZrQbj50kWA">
+    <ownedAttribute xmi:id="_kSLiAJubEeqmZrQbj50kWA" name="borderValue1">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_nCSSIJubEeqmZrQbj50kWA" value="5"/>
+    </ownedAttribute>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_ckrG8JufEeqmZrQbj50kWA" name="fbNull"/>
   </packagedElement>
 </uml:Model>
