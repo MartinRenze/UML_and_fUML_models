@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_HhFBwE4UEeiTBv0OlW4vQw" name="openCvFunctions">
   <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="OpenCvFunctions">
-    <ownedAttribute xmi:id="_h8KkkJrlEeqbjcUD4E1zIg" name="borderValue">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_jsTFcJrlEeqbjcUD4E1zIg" value="20"/>
-    </ownedAttribute>
     <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_YyT5AE4UEeiTBv0OlW4vQw" name="fbNull">
       <language>CPP</language>
       <body>;</body>
@@ -13,11 +9,11 @@
       <ownedParameter xmi:id="_yBR78FDAEeq9rLGcLmUOPg" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
-      <ownedParameter xmi:id="_BbExkJEZEeqvZ7mBc2P9AQ" name="outputImage" direction="return">
-        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-      </ownedParameter>
       <ownedParameter xmi:id="_RorooJrdEeqzWLJk_3wCrQ" name="inputVal1">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_BbExkJEZEeqvZ7mBc2P9AQ" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
       <language>CPP</language>
       <language>INCLUDE</language>
@@ -297,11 +293,37 @@ libopencv_imgcodecs</body>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_hve7wJubEeqmZrQbj50kWA" name="Settings" classifierBehavior="_ckrG8JufEeqmZrQbj50kWA">
-    <ownedAttribute xmi:id="_kSLiAJubEeqmZrQbj50kWA" name="borderValue1">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      <defaultValue xmi:type="uml:LiteralString" xmi:id="_nCSSIJubEeqmZrQbj50kWA" value="5"/>
-    </ownedAttribute>
-    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_ckrG8JufEeqmZrQbj50kWA" name="fbNull"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IXh64J9SEeqmH99faP8H5A" name="HelperFunctions">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_MzKYsJ9SEeqmH99faP8H5A" name="parentActivity" node="_MzKYtp9SEeqmH99faP8H5A _MzKYt59SEeqmH99faP8H5A _MzKYuJ9SEeqmH99faP8H5A">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_MzKYsZ9SEeqmH99faP8H5A" target="_MzKYuJ9SEeqmH99faP8H5A" source="_MzKYtp9SEeqmH99faP8H5A">
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_MzKYsp9SEeqmH99faP8H5A" name="Initial1_To_ActivityFinal1_weight"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_MzKYs59SEeqmH99faP8H5A" target="_MzKYt59SEeqmH99faP8H5A" source="_MzKYuJ9SEeqmH99faP8H5A">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_MzKYtJ9SEeqmH99faP8H5A" name="tempNull_cba_To_ActivityFinal1_guard" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_MzKYtZ9SEeqmH99faP8H5A" name="tempNull_cba_To_ActivityFinal1_weight"/>
+      </edge>
+      <node xmi:type="uml:InitialNode" xmi:id="_MzKYtp9SEeqmH99faP8H5A" name="Initial1" outgoing="_MzKYsZ9SEeqmH99faP8H5A"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_MzKYt59SEeqmH99faP8H5A" name="ActivityFinal1" incoming="_MzKYs59SEeqmH99faP8H5A"/>
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_MzKYuJ9SEeqmH99faP8H5A" name="tempNull_cba" incoming="_MzKYsZ9SEeqmH99faP8H5A" outgoing="_MzKYs59SEeqmH99faP8H5A" behavior="_OkyuYJ9SEeqmH99faP8H5A"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_OkyuYJ9SEeqmH99faP8H5A" name="fbNull">
+      <language>CPP</language>
+      <body>;</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_S-HfEJ9SEeqmH99faP8H5A" name="fbReadInteger" specification="_W3VMUJ9SEeqmH99faP8H5A">
+      <ownedParameter xmi:id="_dKmhMJ9SEeqmH99faP8H5A" name="number" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <body>std::cout&lt;&lt;&quot;Gib eine Zahl ein: &quot;&lt;&lt; std::endl;
+std::cin >> number;</body>
+      <body>#include &lt;iostream></body>
+    </ownedBehavior>
+    <ownedOperation xmi:id="_W3VMUJ9SEeqmH99faP8H5A" name="readInteger" method="_S-HfEJ9SEeqmH99faP8H5A">
+      <ownedParameter xmi:id="_cIIXkJ9SEeqmH99faP8H5A" name="number" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
   </packagedElement>
 </uml:Model>
