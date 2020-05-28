@@ -9,7 +9,7 @@
       <ownedParameter xmi:id="_yBR78FDAEeq9rLGcLmUOPg" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
-      <ownedParameter xmi:id="_RorooJrdEeqzWLJk_3wCrQ" name="inputVal1">
+      <ownedParameter xmi:id="_RorooJrdEeqzWLJk_3wCrQ" name="inputNumber">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
       <ownedParameter xmi:id="_BbExkJEZEeqvZ7mBc2P9AQ" name="outputImage" direction="return">
@@ -24,7 +24,7 @@
       <body>using namespace cv;
 
 std::cout&lt;&lt;&quot;Add border&quot; &lt;&lt; std::endl;
-std::cout&lt;&lt;&quot;Border: &quot; &lt;&lt; inputVal1 &lt;&lt; std::endl;
+std::cout&lt;&lt;&quot;Border: &quot; &lt;&lt; inputNumber &lt;&lt; std::endl;
 
 int top, bottom, left, right;
 int borderType = BORDER_CONSTANT;
@@ -36,10 +36,10 @@ if( inputImage->empty() )
 }
 
 //top = (int) (0.05*(inputImage->rows));
-top = inputVal1;
-bottom = inputVal1;
-left = inputVal1;
-right = inputVal1;
+top = inputNumber;
+bottom = inputNumber;
+left = inputNumber;
+right = inputNumber;
 
 Scalar value( rng.uniform(0, 255), rng.uniform(0, 255), rng.uniform(0, 255) );
 
@@ -54,6 +54,9 @@ libopencv_highgui
 libopencv_imgcodecs</body>
     </ownedBehavior>
     <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_EBJJ4FC4Eeq1EqXxxN7UeQ" name="fbLoadImage" specification="_Bx5gkFC3Eeq1EqXxxN7UeQ">
+      <ownedParameter xmi:id="_OIhWQKEMEeq_u6OnhKUNsA" name="inputText">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
       <ownedParameter xmi:id="_puGsMFC9EeqcOK2DUAL-Pw" name="outputImage" direction="return">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
@@ -67,11 +70,7 @@ libopencv_imgcodecs</body>
 
 std::cout&lt;&lt;&quot;Bild laden ...&quot; &lt;&lt; std::endl;
 
-std::string imagePath;
-std::cout&lt;&lt;&quot;Gib den Bildpfad an: &quot;&lt;&lt; std::endl;
-std::cin >> imagePath;
-
-const char* image_name = imagePath.c_str();
+const char* image_name = inputText.c_str();
 //const char* image_name = &quot;lena.png&quot;;
 // Load Image
 std::shared_ptr&lt;cv::Mat> matPointer = std::make_shared&lt;cv::Mat>(imread( image_name, IMREAD_COLOR ));
@@ -95,6 +94,9 @@ libopencv_imgcodecs</body>
       <ownedParameter xmi:id="_8JPrkJEYEeqvZ7mBc2P9AQ" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
+      <ownedParameter xmi:id="_rSXoAKEREeqWccW7oP29Ww" name="inputText">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
       <language>CPP</language>
       <language>INCLUDE</language>
       <language>LIBRARY</language>
@@ -108,7 +110,7 @@ if( inputImage->empty() )
       printf(&quot; No data entered, please enter the path to an image file \n&quot;);
 }
 
-imwrite( &quot;lena1.png&quot;, *inputImage);</body>
+imwrite( inputText, *inputImage);</body>
       <body>#include &lt;iostream>
 #include &quot;opencv2/opencv.hpp&quot;</body>
       <body>libopencv_core
@@ -254,7 +256,7 @@ libopencv_imgcodecs</body>
       <ownedParameter xmi:id="__SxAIFDAEeq9rLGcLmUOPg" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
-      <ownedParameter xmi:id="_YvHN4JrfEeqzWLJk_3wCrQ" name="inputVal1">
+      <ownedParameter xmi:id="_YvHN4JrfEeqzWLJk_3wCrQ" name="inputNumber">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedParameter>
       <ownedParameter xmi:id="_YjR4sJEYEeqvZ7mBc2P9AQ" name="outputImage" direction="return">
@@ -262,6 +264,9 @@ libopencv_imgcodecs</body>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_Bx5gkFC3Eeq1EqXxxN7UeQ" name="loadImage" method="_EBJJ4FC4Eeq1EqXxxN7UeQ">
+      <ownedParameter xmi:id="_TMjQ0KEMEeq_u6OnhKUNsA" name="inputText">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
       <ownedParameter xmi:id="_rZEHQFC_Eeq9rLGcLmUOPg" name="outputImage" direction="return">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
@@ -269,6 +274,9 @@ libopencv_imgcodecs</body>
     <ownedOperation xmi:id="_aj080I02Eeq0h-SaVz8HEQ" name="saveImage" method="_vgNugJEYEeqvZ7mBc2P9AQ">
       <ownedParameter xmi:id="_Rh9LAJEYEeqvZ7mBc2P9AQ" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_wO_TAKEREeqWccW7oP29Ww" name="inputText">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_9nlGQJEiEeqn6NSw2h6Cow" name="showImage" method="_1evW4JEiEeqn6NSw2h6Cow">
@@ -293,7 +301,7 @@ libopencv_imgcodecs</body>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_IXh64J9SEeqmH99faP8H5A" name="HelperFunctions">
+  <packagedElement xmi:type="uml:Class" xmi:id="_IXh64J9SEeqmH99faP8H5A" name="HelperFunctions" classifierBehavior="_SJeGMKDrEeqBM9vnuq_wQQ">
     <ownedBehavior xmi:type="uml:Activity" xmi:id="_MzKYsJ9SEeqmH99faP8H5A" name="parentActivity" node="_MzKYtp9SEeqmH99faP8H5A _MzKYt59SEeqmH99faP8H5A _MzKYuJ9SEeqmH99faP8H5A">
       <edge xmi:type="uml:ControlFlow" xmi:id="_MzKYsZ9SEeqmH99faP8H5A" target="_MzKYuJ9SEeqmH99faP8H5A" source="_MzKYtp9SEeqmH99faP8H5A">
         <weight xmi:type="uml:LiteralInteger" xmi:id="_MzKYsp9SEeqmH99faP8H5A" name="Initial1_To_ActivityFinal1_weight"/>
@@ -320,9 +328,79 @@ libopencv_imgcodecs</body>
 std::cin >> number;</body>
       <body>#include &lt;iostream></body>
     </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_SJeGMKDrEeqBM9vnuq_wQQ" name="fbReadFilePath">
+      <ownedParameter xmi:id="_dVOM8KDrEeqBM9vnuq_wQQ" name="text" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <body>std::cout&lt;&lt;&quot;Wähle eine Datei aus: &quot;&lt;&lt; std::endl;
+nfdchar_t *outPath = NULL;
+    nfdresult_t result = NFD_OpenDialog( NULL, NULL, &amp;outPath );
+        
+    if ( result == NFD_OKAY ) {
+        puts(&quot;Success!&quot;);
+	text = outPath; 
+        puts(outPath);
+        free(outPath);
+    }
+    else if ( result == NFD_CANCEL ) {
+        puts(&quot;Abbruch!&quot;);
+    }
+    else {
+        printf(&quot;Error: %s\n&quot;, NFD_GetError() );
+    }</body>
+      <body>#include &lt;iostream>
+#include &lt;nfd.h>
+#include &lt;stdio.h>
+#include &lt;stdlib.h></body>
+      <body>libnf
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_pScNEKEQEeqPk8zz-Wtcgg" name="fbReadFileSavePath">
+      <ownedParameter xmi:id="_pScNEaEQEeqPk8zz-Wtcgg" name="text" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <body>std::cout&lt;&lt;&quot;Wähle einen Ordner aus: &quot;&lt;&lt; std::endl;
+nfdchar_t *outPath = NULL;
+    nfdresult_t result = NFD_SaveDialog( NULL, NULL, &amp;outPath );
+        
+    if ( result == NFD_OKAY ) {
+        puts(&quot;Success!&quot;);
+	text = outPath; 
+        puts(outPath);
+        free(outPath);
+    }
+    else if ( result == NFD_CANCEL ) {
+        puts(&quot;Abbruch!&quot;);
+    }
+    else {
+        printf(&quot;Error: %s\n&quot;, NFD_GetError() );
+    }</body>
+      <body>#include &lt;iostream>
+#include &lt;nfd.h>
+#include &lt;stdio.h>
+#include &lt;stdlib.h></body>
+      <body>libnf
+</body>
+    </ownedBehavior>
     <ownedOperation xmi:id="_W3VMUJ9SEeqmH99faP8H5A" name="readInteger" method="_S-HfEJ9SEeqmH99faP8H5A">
       <ownedParameter xmi:id="_cIIXkJ9SEeqmH99faP8H5A" name="number" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_V2o7gKDrEeqBM9vnuq_wQQ" name="readFilePath">
+      <ownedParameter xmi:id="_V2o7gaDrEeqBM9vnuq_wQQ" name="text" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_opZQEKEQEeqPk8zz-Wtcgg" name="readFileSavePath">
+      <ownedParameter xmi:id="_opZQEaEQEeqPk8zz-Wtcgg" name="text" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
