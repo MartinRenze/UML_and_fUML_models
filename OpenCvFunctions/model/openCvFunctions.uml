@@ -150,6 +150,9 @@ libopencv_imgcodecs</body>
       <ownedParameter xmi:id="_c6mMgJE_EeqXzolMok_G0Q" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
+      <ownedParameter xmi:id="_vHVmoKGOEeq9gvhtp5pcpQ" name="inputNumber">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
       <ownedParameter xmi:id="_d4szgJE_EeqXzolMok_G0Q" name="outputImage" direction="return">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
@@ -158,9 +161,9 @@ libopencv_imgcodecs</body>
       <language>LIBRARY</language>
       <body>using namespace cv;
 
-std::cout&lt;&lt;&quot;Gaussian blur&quot; &lt;&lt; std::endl;
+std::cout&lt;&lt;&quot;Gaussian blur - ksize: &quot; &lt;&lt; inputNumber &lt;&lt; std::endl;
 
-Size ksize = Size(31,31);
+Size ksize = Size(inputNumber,inputNumber);
 double sigmaX = 0;
 double sigmaY = 0;
 int borderType = BORDER_CONSTANT;
@@ -193,6 +196,9 @@ libopencv_imgcodecs</body>
       <ownedParameter xmi:id="_3LyBUZE_EeqXzolMok_G0Q" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
+      <ownedParameter xmi:id="_Dk4SwKGYEeq9gvhtp5pcpQ" name="inputFilterImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
       <ownedParameter xmi:id="_3LyBUpE_EeqXzolMok_G0Q" name="outputImage" direction="return">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
@@ -201,10 +207,9 @@ libopencv_imgcodecs</body>
       <language>LIBRARY</language>
       <body>using namespace cv;
 
-std::cout&lt;&lt;&quot;Filter 2D&quot; &lt;&lt; std::endl;
+std::cout&lt;&lt;&quot;Filter 2D (4)&quot; &lt;&lt; std::endl;
 
 int ddepth = -1 ;
-Mat kernel;
 Point anchor = Point(-1,-1);
 double delta = 0;
 int borderType = BORDER_CONSTANT;
@@ -214,11 +219,19 @@ if( inputImage->empty() )
   printf(&quot; No data entered, please enter the path to an image file \n&quot;);
 }
 
-/// Update kernel size for a normalized box filter
+/* Create Template Filter File
+Mat kernel;
 int ind = 2;
 int kernel_size;
 kernel_size = 3 + 2*( ind%5 );
 kernel = Mat::ones( kernel_size, kernel_size, CV_32F )/ (float)(kernel_size*kernel_size);
+kernel.convertTo(kernel, CV_8U, 255.0); 
+cvtColor(kernel, kernel, COLOR_GRAY2RGB);
+imwrite(&quot;filter255.bmp&quot;, kernel);
+*/
+
+cvtColor(*inputFilterImage, *inputFilterImage, COLOR_BGR2GRAY);
+(*inputFilterImage).convertTo(*inputFilterImage, CV_32F, 1/255.0); 
 
 outputImage = inputImage;
 
@@ -226,7 +239,7 @@ filter2D(
 		*inputImage,
 		*outputImage,
 		ddepth,
-		kernel,
+		*inputFilterImage,
 		anchor,
 		delta,
 		borderType
@@ -288,12 +301,18 @@ libopencv_imgcodecs</body>
       <ownedParameter xmi:id="_oupCUJE_EeqXzolMok_G0Q" name="inputImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
+      <ownedParameter xmi:id="_zUPr8KGOEeq9gvhtp5pcpQ" name="inputNumber">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
       <ownedParameter xmi:id="_rFzuAJE_EeqXzolMok_G0Q" name="outputImage" direction="return">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
     </ownedOperation>
     <ownedOperation xmi:id="_7LbtwJE_EeqXzolMok_G0Q" name="filter2D_mde" visibility="public" method="_3LyBUJE_EeqXzolMok_G0Q">
       <ownedParameter xmi:id="_7LbtwZE_EeqXzolMok_G0Q" name="inputImage">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_GCu1QKGYEeq9gvhtp5pcpQ" name="inputFilterImage">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
       </ownedParameter>
       <ownedParameter xmi:id="_7LbtwpE_EeqXzolMok_G0Q" name="outputImage" direction="return">
