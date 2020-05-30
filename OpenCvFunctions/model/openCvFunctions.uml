@@ -68,10 +68,10 @@ libopencv_imgcodecs</body>
       <language>LIBRARY2</language>
       <body>using namespace cv;
 
-std::cout&lt;&lt;&quot;Bild laden ...&quot; &lt;&lt; std::endl;
+std::cout&lt;&lt;&quot;Bild laden&quot; &lt;&lt; std::endl;
 
 const char* image_name = inputText.c_str();
-//const char* image_name = &quot;lena.png&quot;;
+
 // Load Image
 std::shared_ptr&lt;cv::Mat> matPointer = std::make_shared&lt;cv::Mat>(imread( image_name, IMREAD_COLOR ));
 
@@ -79,9 +79,7 @@ if(matPointer->empty() )
 {
       printf(&quot;No data entered, please enter the path to an image file \n&quot;);
 }
-std::cout&lt;&lt;&quot;Bild laden mitte ...&quot; &lt;&lt; std::endl;
 outputImage = matPointer;
-std::cout&lt;&lt;&quot;Bild laden ende ...&quot; &lt;&lt; std::endl;
 //end</body>
       <body>#include &lt;iostream>
 #include &quot;opencv2/opencv.hpp&quot;</body>
@@ -207,7 +205,7 @@ libopencv_imgcodecs</body>
       <language>LIBRARY</language>
       <body>using namespace cv;
 
-std::cout&lt;&lt;&quot;Filter 2D (4)&quot; &lt;&lt; std::endl;
+std::cout&lt;&lt;&quot;Filter 2D&quot; &lt;&lt; std::endl;
 
 int ddepth = -1 ;
 Point anchor = Point(-1,-1);
@@ -359,7 +357,6 @@ nfdchar_t *outPath = NULL;
     nfdresult_t result = NFD_OpenDialog( NULL, NULL, &amp;outPath );
         
     if ( result == NFD_OKAY ) {
-        puts(&quot;Success!&quot;);
 	text = outPath; 
         puts(outPath);
         free(outPath);
@@ -389,7 +386,6 @@ nfdchar_t *outPath = NULL;
     nfdresult_t result = NFD_SaveDialog( NULL, NULL, &amp;outPath );
         
     if ( result == NFD_OKAY ) {
-        puts(&quot;Success!&quot;);
 	text = outPath; 
         puts(outPath);
         free(outPath);
