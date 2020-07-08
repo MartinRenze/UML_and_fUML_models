@@ -46,4 +46,5 @@
     </ownedAttribute>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="void_id" name="void" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xklFAK9LEeqSGt-f7KAwpg" name="VideoCapture"/>
 </uml:Model>

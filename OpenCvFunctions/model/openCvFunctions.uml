@@ -125,18 +125,16 @@ libopencv_imgcodecs</body>
       <language>LIBRARY</language>
       <body>using namespace cv;
 
-std::cout&lt;&lt;&quot;Show image&quot; &lt;&lt; std::endl;
-
 if( inputImage->empty() )
 {
       printf(&quot; No data entered, please enter the path to an image file \n&quot;);
 }
 
-const char* window_name = &quot;OpenCV MDE4CPP - Show Image&quot;;
-namedWindow( window_name, WINDOW_AUTOSIZE );
+//const char* window_name = &quot;OpenCV MDE4CPP - Show Image&quot;;
+//namedWindow(window_name, WINDOW_AUTOSIZE );
 
-imshow( window_name, *inputImage);
-waitKey(0); </body>
+imshow( &quot;Lachen!&quot;, *inputImage);
+ waitKey(10);</body>
       <body>#include &lt;iostream>
 #include &quot;opencv2/opencv.hpp&quot;</body>
       <body>libopencv_core
@@ -251,17 +249,72 @@ libopencv_imgproc
 libopencv_highgui
 libopencv_imgcodecs</body>
     </ownedBehavior>
-    <ownedBehavior xmi:type="uml:Activity" xmi:id="_pyKJwJnPEeq36Op0knvQww" name="parentActivity" node="_1Dde4JnPEeq36Op0knvQww _1zX44JnPEeq36Op0knvQww _rXPbwJnQEeq36Op0knvQww">
-      <edge xmi:type="uml:ControlFlow" xmi:id="_2eSeIJnPEeq36Op0knvQww" target="_rXPbwJnQEeq36Op0knvQww" source="_1Dde4JnPEeq36Op0knvQww">
-        <weight xmi:type="uml:LiteralInteger" xmi:id="_2eTsQJnPEeq36Op0knvQww" name="Initial1_To_ActivityFinal1_weight"/>
-      </edge>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_uVJXUJnQEeq36Op0knvQww" target="_1zX44JnPEeq36Op0knvQww" source="_rXPbwJnQEeq36Op0knvQww">
-        <guard xmi:type="uml:LiteralBoolean" xmi:id="_uVJ-YJnQEeq36Op0knvQww" name="tempNull_cba_To_ActivityFinal1_guard" value="true"/>
-        <weight xmi:type="uml:LiteralInteger" xmi:id="_uVJ-YZnQEeq36Op0knvQww" name="tempNull_cba_To_ActivityFinal1_weight"/>
-      </edge>
-      <node xmi:type="uml:InitialNode" xmi:id="_1Dde4JnPEeq36Op0knvQww" name="Initial1" outgoing="_2eSeIJnPEeq36Op0knvQww"/>
-      <node xmi:type="uml:ActivityFinalNode" xmi:id="_1zX44JnPEeq36Op0knvQww" name="ActivityFinal1" incoming="_uVJXUJnQEeq36Op0knvQww"/>
-      <node xmi:type="uml:CallBehaviorAction" xmi:id="_rXPbwJnQEeq36Op0knvQww" name="tempNull_cba" incoming="_2eSeIJnPEeq36Op0knvQww" outgoing="_uVJXUJnQEeq36Op0knvQww" behavior="_YyT5AE4UEeiTBv0OlW4vQw"/>
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_pyKJwJnPEeq36Op0knvQww" name="parentActivity" node="_rXPbwJnQEeq36Op0knvQww">
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_rXPbwJnQEeq36Op0knvQww" name="tempNull_cba" behavior="_YyT5AE4UEeiTBv0OlW4vQw"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_obD-8KzeEeqSVs73rKl_Aw" name="fbStartVideo" specification="_0HH9cKzeEeqSVs73rKl_Aw">
+      <ownedParameter xmi:id="_PZCewK-5Eeq0--SMeDRq3Q" name="outputCap" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#_xklFAK9LEeqSGt-f7KAwpg"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <language>LIBRARY0</language>
+      <language>LIBRARY1</language>
+      <language>LIBRARY2</language>
+      <body>using namespace cv;
+
+std::cout&lt;&lt;&quot;Start Video&quot; &lt;&lt; std::endl;
+
+std::shared_ptr&lt;cv::VideoCapture> cap = std::make_shared&lt;cv::VideoCapture>();
+
+if(!cap->open(0))
+{
+	std::cout&lt;&lt;&quot;Start Video Fehler&quot; &lt;&lt; std::endl;
+}
+
+outputCap = cap;</body>
+      <body>#include &lt;iostream>
+#include &quot;opencv2/opencv.hpp&quot;</body>
+      <body>libopencv_core
+libopencv_imgproc
+libopencv_highgui
+libopencv_imgcodecs
+</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_UQtNMK9JEeqSGt-f7KAwpg" name="fbGetImageFromVideo" specification="_KIzMQK9NEeqnwdQqMIjLag">
+      <ownedParameter xmi:id="_ISeZQK9MEeqvN5xy4b3Q6Q" name="inputCap">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#_xklFAK9LEeqSGt-f7KAwpg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_ISeZQa9MEeqvN5xy4b3Q6Q" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_stGccK--Eeq-Cp0IjlPwng" name="outputCap" direction="out">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#_xklFAK9LEeqSGt-f7KAwpg"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <language>LIBRARY</language>
+      <language>LIBRARY0</language>
+      <language>LIBRARY1</language>
+      <language>LIBRARY2</language>
+      <body>using namespace cv;
+
+std::cout&lt;&lt;&quot;Video Bild laden&quot; &lt;&lt; std::endl;
+
+VideoCapture cap;
+cap = *inputCap;
+std::shared_ptr&lt;cv::Mat> image = std::make_shared&lt;cv::Mat>();
+cap >> *image;
+outputImage = image;
+outputCap = inputCap;</body>
+      <body>#include &lt;iostream>
+#include &quot;opencv2/opencv.hpp&quot;</body>
+      <body>libopencv_core
+libopencv_imgproc
+libopencv_highgui
+libopencv_imgcodecs
+</body>
     </ownedBehavior>
     <ownedOperation xmi:id="_Ide5sFC1Eeq1EqXxxN7UeQ" name="addBorder" method="_S5MioE6cEeqyNvPDU5XeYA">
       <ownedParameter xmi:id="__SxAIFDAEeq9rLGcLmUOPg" name="inputImage">
@@ -315,6 +368,22 @@ libopencv_imgcodecs</body>
       </ownedParameter>
       <ownedParameter xmi:id="_7LbtwpE_EeqXzolMok_G0Q" name="outputImage" direction="return">
         <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_0HH9cKzeEeqSVs73rKl_Aw" name="startVideo" method="_obD-8KzeEeqSVs73rKl_Aw">
+      <ownedParameter xmi:id="_7txtsK-7EeqBitCZL73fpQ" name="outputCap" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#_xklFAK9LEeqSGt-f7KAwpg"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_KIzMQK9NEeqnwdQqMIjLag" name="getImageFromVideo" method="_UQtNMK9JEeqSGt-f7KAwpg">
+      <ownedParameter xmi:id="_6QAvMK-7EeqBitCZL73fpQ" name="inputCap">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#_xklFAK9LEeqSGt-f7KAwpg"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_NdOKYa9NEeqnwdQqMIjLag" name="outputImage" direction="return">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_vXAd8K--Eeq-Cp0IjlPwng" name="outputCap" direction="out">
+        <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#_xklFAK9LEeqSGt-f7KAwpg"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
@@ -403,6 +472,37 @@ nfdchar_t *outPath = NULL;
       <body>libnf
 </body>
     </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_W1p4YKznEeqmjJtqCPCPTA" name="fbAddOne" specification="_i6Rg0KznEeqmjJtqCPCPTA">
+      <ownedParameter xmi:id="_W1p4YaznEeqmjJtqCPCPTA" name="numberIn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_dhpPQKznEeqmjJtqCPCPTA" name="numberOut" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <body>numberOut = numberIn +1;</body>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_el7hUKzoEeq7o6QpzdmqDA" name="fbIsLowerThan">
+      <ownedParameter xmi:id="_feYzUKzoEeq7o6QpzdmqDA" name="numberIn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_feYzUazoEeq7o6QpzdmqDA" name="numberLimitIn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_feZaYKzoEeq7o6QpzdmqDA" name="boolOut" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedParameter>
+      <language>CPP</language>
+      <language>INCLUDE</language>
+      <body>if(numberIn &lt; numberLimitIn)
+{
+	boolOut = true;
+}
+else
+{
+	boolOut = false;
+}</body>
+    </ownedBehavior>
     <ownedOperation xmi:id="_W3VMUJ9SEeqmH99faP8H5A" name="readInteger" method="_S-HfEJ9SEeqmH99faP8H5A">
       <ownedParameter xmi:id="_cIIXkJ9SEeqmH99faP8H5A" name="number" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -416,6 +516,25 @@ nfdchar_t *outPath = NULL;
     <ownedOperation xmi:id="_opZQEKEQEeqPk8zz-Wtcgg" name="readFileSavePath">
       <ownedParameter xmi:id="_opZQEaEQEeqPk8zz-Wtcgg" name="text" direction="return">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_i6Rg0KznEeqmjJtqCPCPTA" name="addOne" method="_W1p4YKznEeqmjJtqCPCPTA">
+      <ownedParameter xmi:id="_l80EwKznEeqmjJtqCPCPTA" name="numberIn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_l80EwaznEeqmjJtqCPCPTA" name="numberOut" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_Tr1yUKzoEeq7o6QpzdmqDA" name="isLowerThan">
+      <ownedParameter xmi:id="_Tr1yUazoEeq7o6QpzdmqDA" name="numberIn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_YU_uwKzoEeq7o6QpzdmqDA" name="numberLimitIn">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_Tr1yUqzoEeq7o6QpzdmqDA" name="boolOut" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedParameter>
     </ownedOperation>
   </packagedElement>
