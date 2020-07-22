@@ -4,7 +4,7 @@
     <importedPackage xmi:type="uml:Model" href="../../OpenCvFunctions/model/openCvFunctions.uml#_HhFBwE4UEeiTBv0OlW4vQw"/>
   </packageImport>
   <packagedElement xmi:type="uml:Class" xmi:id="_MVkcwE4aEeiTBv0OlW4vQw" name="TransformImage">
-    <ownedBehavior xmi:type="uml:Activity" xmi:id="_M7SAoE4UEeiTBv0OlW4vQw" name="imageBorderTest2" node="_s_y3Ua-wEeqnlqUeuS__Ig _IrgpEK-0EeqPt5L4H5QrNA _NKmDgK-0EeqPt5L4H5QrNA _tp944K-0EeqPt5L4H5QrNA _uqL_wK-0EeqPt5L4H5QrNA _yU5jYrYJEeq2gO5kcf026g _5tzDkbYJEeq2gO5kcf026g">
+    <ownedBehavior xmi:type="uml:Activity" xmi:id="_M7SAoE4UEeiTBv0OlW4vQw" name="imageBorderTest2" node="_s_y3Ua-wEeqnlqUeuS__Ig _IrgpEK-0EeqPt5L4H5QrNA _NKmDgK-0EeqPt5L4H5QrNA _tp944K-0EeqPt5L4H5QrNA _uqL_wK-0EeqPt5L4H5QrNA _PDcGkMDuEeq3S4NWho36Vw">
       <ownedBehavior xmi:type="uml:Activity" xmi:id="_s_t-0K-wEeqnlqUeuS__Ig" name="BildAnzeigenActivity1" node="_s_t-0a-wEeqnlqUeuS__Ig _s_ul4K-wEeqnlqUeuS__Ig _s_xCIK-wEeqnlqUeuS__Ig _s_yQQK-wEeqnlqUeuS__Ig">
         <ownedParameter xmi:id="_s_xpMa-wEeqnlqUeuS__Ig" name="Parameter1">
           <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
@@ -22,63 +22,37 @@
         <node xmi:type="uml:ActivityFinalNode" xmi:id="_s_xCIK-wEeqnlqUeuS__Ig" name="ActivityFinal1" incoming="_s_xpMK-wEeqnlqUeuS__Ig"/>
         <node xmi:type="uml:ActivityParameterNode" xmi:id="_s_yQQK-wEeqnlqUeuS__Ig" name="Parameter1" outgoing="_s_y3UK-wEeqnlqUeuS__Ig" parameter="_s_xpMa-wEeqnlqUeuS__Ig"/>
       </ownedBehavior>
-      <ownedBehavior xmi:type="uml:Activity" xmi:id="_yUc3cLYJEeq2gO5kcf026g" name="Filter2DActivity0" node="_yUf6wLYJEeq2gO5kcf026g _yUiXALYJEeq2gO5kcf026g _yUxnkLYJEeq2gO5kcf026g _yU0q4LYJEeq2gO5kcf026g _yU2gELYJEeq2gO5kcf026g _yU48ULYJEeq2gO5kcf026g">
-        <ownedParameter xmi:id="_yUyOoLYJEeq2gO5kcf026g" name="Parameter1">
+      <ownedBehavior xmi:type="uml:Activity" xmi:id="_PDB24MDuEeq3S4NWho36Vw" name="GaussFilterActivity0" node="_PDE6MMDuEeq3S4NWho36Vw _PDZDQMDuEeq3S4NWho36Vw _PDaRYMDuEeq3S4NWho36Vw _PDa4cMDuEeq3S4NWho36Vw">
+        <ownedParameter xmi:id="_PDXOEMDuEeq3S4NWho36Vw" name="Parameter1">
           <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </ownedParameter>
-        <ownedParameter xmi:id="_yU1R8LYJEeq2gO5kcf026g" name="Parameter2">
+        <ownedParameter xmi:id="_PDZDQcDuEeq3S4NWho36Vw" name="Parameter2" direction="out">
           <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </ownedParameter>
-        <ownedParameter xmi:id="_yU3HILYJEeq2gO5kcf026g" name="Parameter3" direction="out">
-          <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-        </ownedParameter>
-        <edge xmi:type="uml:ControlFlow" xmi:id="_yUxnkbYJEeq2gO5kcf026g" target="_yUiXALYJEeq2gO5kcf026g" source="_yUf6wLYJEeq2gO5kcf026g"/>
-        <edge xmi:type="uml:ControlFlow" xmi:id="_yUxnkrYJEeq2gO5kcf026g" target="_yUxnkLYJEeq2gO5kcf026g" source="_yUiXALYJEeq2gO5kcf026g"/>
-        <edge xmi:type="uml:ObjectFlow" xmi:id="_yU48UbYJEeq2gO5kcf026g" target="_yUmBYLYJEeq2gO5kcf026g" source="_yU0q4LYJEeq2gO5kcf026g"/>
-        <edge xmi:type="uml:ObjectFlow" xmi:id="_yU5jYLYJEeq2gO5kcf026g" target="_yU48ULYJEeq2gO5kcf026g" source="_yUvyYLYJEeq2gO5kcf026g"/>
-        <edge xmi:type="uml:ObjectFlow" xmi:id="_yU5jYbYJEeq2gO5kcf026g" target="_yUt9MLYJEeq2gO5kcf026g" source="_yU2gELYJEeq2gO5kcf026g"/>
-        <node xmi:type="uml:InitialNode" xmi:id="_yUf6wLYJEeq2gO5kcf026g" name="Initial1" outgoing="_yUxnkbYJEeq2gO5kcf026g"/>
-        <node xmi:type="uml:CallBehaviorAction" xmi:id="_yUiXALYJEeq2gO5kcf026g" name="CallBehaviorAction1" incoming="_yUxnkbYJEeq2gO5kcf026g" outgoing="_yUxnkrYJEeq2gO5kcf026g">
-          <argument xmi:id="_yUmBYLYJEeq2gO5kcf026g" name="inputImage" incoming="_yU48UbYJEeq2gO5kcf026g">
+        <edge xmi:type="uml:ObjectFlow" xmi:id="_PDaRYcDuEeq3S4NWho36Vw" target="_PDHWcMDuEeq3S4NWho36Vw" source="_PDZDQMDuEeq3S4NWho36Vw"/>
+        <edge xmi:type="uml:ObjectFlow" xmi:id="_PDaRYsDuEeq3S4NWho36Vw" target="_PDaRYMDuEeq3S4NWho36Vw" source="_PDV_8MDuEeq3S4NWho36Vw"/>
+        <edge xmi:type="uml:ObjectFlow" xmi:id="_PDbfgcDuEeq3S4NWho36Vw" target="_PDTjsMDuEeq3S4NWho36Vw" source="_PDa4ccDuEeq3S4NWho36Vw"/>
+        <node xmi:type="uml:CallBehaviorAction" xmi:id="_PDE6MMDuEeq3S4NWho36Vw" name="CallBehaviorAction1">
+          <argument xmi:id="_PDHWcMDuEeq3S4NWho36Vw" name="inputImage" incoming="_PDaRYcDuEeq3S4NWho36Vw">
             <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
           </argument>
-          <argument xmi:id="_yUt9MLYJEeq2gO5kcf026g" name="inputFilterImage" incoming="_yU5jYbYJEeq2gO5kcf026g">
-            <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+          <argument xmi:id="_PDTjsMDuEeq3S4NWho36Vw" name="inputNumber" incoming="_PDbfgcDuEeq3S4NWho36Vw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </argument>
-          <result xmi:id="_yUvyYLYJEeq2gO5kcf026g" name="OutputPin1" outgoing="_yU5jYLYJEeq2gO5kcf026g">
+          <result xmi:id="_PDV_8MDuEeq3S4NWho36Vw" name="OutputPin1" outgoing="_PDaRYsDuEeq3S4NWho36Vw">
             <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
           </result>
-          <behavior xmi:type="uml:FunctionBehavior" href="../../OpenCvFunctions/model/openCvFunctions.uml#_3LyBUJE_EeqXzolMok_G0Q"/>
+          <behavior xmi:type="uml:FunctionBehavior" href="../../OpenCvFunctions/model/openCvFunctions.uml#_XJgXoJE_EeqXzolMok_G0Q"/>
         </node>
-        <node xmi:type="uml:ActivityFinalNode" xmi:id="_yUxnkLYJEeq2gO5kcf026g" name="ActivityFinal1" incoming="_yUxnkrYJEeq2gO5kcf026g"/>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_yU0q4LYJEeq2gO5kcf026g" name="Parameter1" outgoing="_yU48UbYJEeq2gO5kcf026g" parameter="_yUyOoLYJEeq2gO5kcf026g"/>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_yU2gELYJEeq2gO5kcf026g" name="Parameter2" outgoing="_yU5jYbYJEeq2gO5kcf026g" parameter="_yU1R8LYJEeq2gO5kcf026g"/>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_yU48ULYJEeq2gO5kcf026g" name="Parameter3" incoming="_yU5jYLYJEeq2gO5kcf026g" parameter="_yU3HILYJEeq2gO5kcf026g"/>
-      </ownedBehavior>
-      <ownedBehavior xmi:type="uml:Activity" xmi:id="_5tloMLYJEeq2gO5kcf026g" name="BildLadenActivity0" node="_5tmPQLYJEeq2gO5kcf026g _5txOYLYJEeq2gO5kcf026g _5txOYrYJEeq2gO5kcf026g">
-        <ownedParameter xmi:id="_5ts88LYJEeq2gO5kcf026g" name="Parameter1" direction="out">
-          <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-        </ownedParameter>
-        <edge xmi:type="uml:ObjectFlow" xmi:id="_5txOYbYJEeq2gO5kcf026g" target="_5txOYLYJEeq2gO5kcf026g" source="_5tru0LYJEeq2gO5kcf026g"/>
-        <edge xmi:type="uml:ObjectFlow" xmi:id="_5tzDkLYJEeq2gO5kcf026g" target="_5torgLYJEeq2gO5kcf026g" source="_5tx1cLYJEeq2gO5kcf026g"/>
-        <node xmi:type="uml:CallBehaviorAction" xmi:id="_5tmPQLYJEeq2gO5kcf026g" name="CallBehaviorAction1">
-          <argument xmi:id="_5torgLYJEeq2gO5kcf026g" name="inputText" incoming="_5tzDkLYJEeq2gO5kcf026g">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </argument>
-          <result xmi:id="_5tru0LYJEeq2gO5kcf026g" name="OutputPin1" outgoing="_5txOYbYJEeq2gO5kcf026g">
-            <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_PDZDQMDuEeq3S4NWho36Vw" name="Parameter1" outgoing="_PDaRYcDuEeq3S4NWho36Vw" parameter="_PDXOEMDuEeq3S4NWho36Vw"/>
+        <node xmi:type="uml:ActivityParameterNode" xmi:id="_PDaRYMDuEeq3S4NWho36Vw" name="Parameter2" incoming="_PDaRYsDuEeq3S4NWho36Vw" parameter="_PDZDQcDuEeq3S4NWho36Vw"/>
+        <node xmi:type="uml:ValueSpecificationAction" xmi:id="_PDa4cMDuEeq3S4NWho36Vw" name="ValueSpecificationAction1">
+          <result xmi:id="_PDa4ccDuEeq3S4NWho36Vw" name="OutputPin1" outgoing="_PDbfgcDuEeq3S4NWho36Vw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           </result>
-          <behavior xmi:type="uml:FunctionBehavior" href="../../OpenCvFunctions/model/openCvFunctions.uml#_EBJJ4FC4Eeq1EqXxxN7UeQ"/>
-        </node>
-        <node xmi:type="uml:ActivityParameterNode" xmi:id="_5txOYLYJEeq2gO5kcf026g" name="Parameter1" incoming="_5txOYbYJEeq2gO5kcf026g" parameter="_5ts88LYJEeq2gO5kcf026g"/>
-        <node xmi:type="uml:ValueSpecificationAction" xmi:id="_5txOYrYJEeq2gO5kcf026g" name="ValueSpecificationAction1">
-          <result xmi:id="_5tx1cLYJEeq2gO5kcf026g" name="OutputPin1" outgoing="_5tzDkLYJEeq2gO5kcf026g">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-          </result>
-          <value xmi:type="uml:LiteralString" xmi:id="_5tycgLYJEeq2gO5kcf026g" value="filterGradient.bmp"/>
+          <value xmi:type="uml:LiteralInteger" xmi:id="_PDbfgMDuEeq3S4NWho36Vw" value="3"/>
         </node>
       </ownedBehavior>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_djmSQK-0EeqPt5L4H5QrNA" target="_yU6xgLYJEeq2gO5kcf026g" source="_afOiUK-0EeqPt5L4H5QrNA"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_vWeeAK-0EeqPt5L4H5QrNA" target="_IrgpEK-0EeqPt5L4H5QrNA" source="_tp944K-0EeqPt5L4H5QrNA">
         <guard xmi:type="uml:LiteralBoolean" xmi:id="_vWfFEK-0EeqPt5L4H5QrNA" name="Initial1_To_Merge1_guard" value="true"/>
         <weight xmi:type="uml:LiteralInteger" xmi:id="_vWfsIK-0EeqPt5L4H5QrNA" name="Initial1_To_Merge1_weight"/>
@@ -92,19 +66,15 @@
         <weight xmi:type="uml:LiteralInteger" xmi:id="_hiKVYK-7EeqBitCZL73fpQ" name="getImageFromVideo_cba_To_Merge1_weight"/>
       </edge>
       <edge xmi:type="uml:ObjectFlow" xmi:id="_OWNzAK-9EeqjyYt_YAHOKg" target="_YDF3EK-0EeqPt5L4H5QrNA" source="_UqtmAK-0EeqPt5L4H5QrNA"/>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_igPm4K--EeqjyYt_YAHOKg" target="_s_y3Uq-wEeqnlqUeuS__Ig" source="_yU900LYJEeq2gO5kcf026g"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_lKowkK--EeqjyYt_YAHOKg" target="_NKmDgK-0EeqPt5L4H5QrNA" source="_uqL_wK-0EeqPt5L4H5QrNA">
         <guard xmi:type="uml:LiteralBoolean" xmi:id="_lKpXoK--EeqjyYt_YAHOKg" name="Merge1_To_getImageFromVideo_cba_guard" value="true"/>
         <weight xmi:type="uml:LiteralInteger" xmi:id="_lKp-sK--EeqjyYt_YAHOKg" name="Merge1_To_getImageFromVideo_cba_weight"/>
       </edge>
-      <edge xmi:type="uml:ObjectFlow" xmi:id="_61Qa4LYJEeq2gO5kcf026g" target="_yU7_oLYJEeq2gO5kcf026g" source="_5tzDkrYJEeq2gO5kcf026g"/>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_8h1RcLYJEeq2gO5kcf026g" target="_5tzDkbYJEeq2gO5kcf026g" source="_NKmDgK-0EeqPt5L4H5QrNA">
-        <guard xmi:type="uml:LiteralBoolean" xmi:id="_8h14gLYJEeq2gO5kcf026g" name="getImageFromVideo_cba_To_BildLadenCBA0_guard" value="true"/>
-        <weight xmi:type="uml:LiteralInteger" xmi:id="_8h3GoLYJEeq2gO5kcf026g" name="getImageFromVideo_cba_To_BildLadenCBA0_weight"/>
-      </edge>
       <edge xmi:type="uml:ObjectFlow" xmi:id="_DFJdULlTEeqO2-IB9h--dA" name="" target="_YDF3EK-0EeqPt5L4H5QrNA" source="_RtzkcK--EeqjyYt_YAHOKg"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_TczTgMDuEeq3S4NWho36Vw" target="_PDctoMDuEeq3S4NWho36Vw" source="_afOiUK-0EeqPt5L4H5QrNA"/>
+      <edge xmi:type="uml:ObjectFlow" xmi:id="_UGvoYMDuEeq3S4NWho36Vw" target="_s_y3Uq-wEeqnlqUeuS__Ig" source="_PDdUsMDuEeq3S4NWho36Vw"/>
       <node xmi:type="uml:CallBehaviorAction" xmi:id="_s_y3Ua-wEeqnlqUeuS__Ig" name="BildAnzeigenCBA1" outgoing="_wiHKsK-0EeqPt5L4H5QrNA" behavior="_s_t-0K-wEeqnlqUeuS__Ig">
-        <argument xmi:id="_s_y3Uq-wEeqnlqUeuS__Ig" name="BildEingang" incoming="_igPm4K--EeqjyYt_YAHOKg">
+        <argument xmi:id="_s_y3Uq-wEeqnlqUeuS__Ig" name="BildEingang" incoming="_UGvoYMDuEeq3S4NWho36Vw">
           <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </argument>
       </node>
@@ -114,11 +84,11 @@
         </result>
         <behavior xmi:type="uml:FunctionBehavior" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/OpenCvFunctions/model/openCvFunctions.uml#_obD-8KzeEeqSVs73rKl_Aw"/>
       </node>
-      <node xmi:type="uml:CallBehaviorAction" xmi:id="_NKmDgK-0EeqPt5L4H5QrNA" name="getImageFromVideo_cba" incoming="_lKowkK--EeqjyYt_YAHOKg" outgoing="_8h1RcLYJEeq2gO5kcf026g">
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_NKmDgK-0EeqPt5L4H5QrNA" name="getImageFromVideo_cba" incoming="_lKowkK--EeqjyYt_YAHOKg">
         <argument xmi:id="_YDF3EK-0EeqPt5L4H5QrNA" name="inputCap" incoming="_OWNzAK-9EeqjyYt_YAHOKg _DFJdULlTEeqO2-IB9h--dA">
           <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#_xklFAK9LEeqSGt-f7KAwpg"/>
         </argument>
-        <result xmi:id="_afOiUK-0EeqPt5L4H5QrNA" name="outputImage" outgoing="_djmSQK-0EeqPt5L4H5QrNA">
+        <result xmi:id="_afOiUK-0EeqPt5L4H5QrNA" name="outputImage" outgoing="_TczTgMDuEeq3S4NWho36Vw">
           <type xmi:type="uml:Class" href="file:/home/ubuntu/Documents/__Uni/Bachelor/FS10/BA/MDE4CPPDEV2/MDE4CPP/userProjects/UML_and_fUML_models/Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </result>
         <result xmi:id="_RtzkcK--EeqjyYt_YAHOKg" name="outputCap" outgoing="_DFJdULlTEeqO2-IB9h--dA">
@@ -128,19 +98,11 @@
       </node>
       <node xmi:type="uml:InitialNode" xmi:id="_tp944K-0EeqPt5L4H5QrNA" name="Initial1" outgoing="_vWeeAK-0EeqPt5L4H5QrNA"/>
       <node xmi:type="uml:MergeNode" xmi:id="_uqL_wK-0EeqPt5L4H5QrNA" name="Merge1" incoming="_wiHKsK-0EeqPt5L4H5QrNA _hiH5IK-7EeqBitCZL73fpQ" outgoing="_lKowkK--EeqjyYt_YAHOKg"/>
-      <node xmi:type="uml:CallBehaviorAction" xmi:id="_yU5jYrYJEeq2gO5kcf026g" name="Filter2DCBA0" behavior="_yUc3cLYJEeq2gO5kcf026g">
-        <argument xmi:id="_yU6xgLYJEeq2gO5kcf026g" name="BildEingang" incoming="_djmSQK-0EeqPt5L4H5QrNA">
+      <node xmi:type="uml:CallBehaviorAction" xmi:id="_PDcGkMDuEeq3S4NWho36Vw" name="GaussFilterCBA0" behavior="_PDB24MDuEeq3S4NWho36Vw">
+        <argument xmi:id="_PDctoMDuEeq3S4NWho36Vw" name="BildEingang" incoming="_TczTgMDuEeq3S4NWho36Vw">
           <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </argument>
-        <argument xmi:id="_yU7_oLYJEeq2gO5kcf026g" name="FilterEingang" incoming="_61Qa4LYJEeq2gO5kcf026g">
-          <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-        </argument>
-        <result xmi:id="_yU900LYJEeq2gO5kcf026g" name="BildAusgang" outgoing="_igPm4K--EeqjyYt_YAHOKg">
-          <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
-        </result>
-      </node>
-      <node xmi:type="uml:CallBehaviorAction" xmi:id="_5tzDkbYJEeq2gO5kcf026g" name="BildLadenCBA0" incoming="_8h1RcLYJEeq2gO5kcf026g" behavior="_5tloMLYJEeq2gO5kcf026g">
-        <result xmi:id="_5tzDkrYJEeq2gO5kcf026g" name="BildAusgang" outgoing="_61Qa4LYJEeq2gO5kcf026g">
+        <result xmi:id="_PDdUsMDuEeq3S4NWho36Vw" name="BildAusgang" outgoing="_UGvoYMDuEeq3S4NWho36Vw">
           <type xmi:type="uml:Class" href="../../Mat/model/cv.uml#7TR_Ew6D.AACAWC1"/>
         </result>
       </node>
